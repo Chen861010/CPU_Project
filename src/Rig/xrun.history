@@ -1,0 +1,10 @@
+s1(07Dec2025:22:51:12):  xrun 8bit_rig.sv register_test.sv -access +rwc -gui 
+s2(07Dec2025:23:12:41):  xrun 8bit_rig.sv register_test.sv -access +rwc -gui 
+s3(07Dec2025:23:38:41):  xrun 8bit_rig.sv register_test.sv -access +rwc -gui 
+s4(07Dec2025:23:49:20):  xrun 8bit_rig.sv register_test.sv -access +rwc -gui 
+s5(08Dec2025:00:01:03):  xrun 8bit_rig.sv register_test.sv -access +rwc -gui 
+s6(08Dec2025:00:05:11):  xrun 8bit_rig.sv register_test.sv -access +rwc -gui 
+s7(08Dec2025:00:11:15):  xrun 8bit_rig.sv register_test.sv -access +rwc -gui 
+s8(08Dec2025:00:12:35):  xrun 8bit_rig.sv register_test.sv -access +rwc -gui 
+s9(08Dec2025:00:17:43):  xrun 8bit_rig.sv register_test.sv -access +rwc -gui 
+s10(08Dec2025:01:25:11):  xrun 8bit_rig.sv register_test.sv -access +rwc -gui 

@@ -1,0 +1,1253 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /register_test
+=== Design Unit: work.register_test
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        11        10         1    90.90%
+
+================================Branch Details================================
+
+Branch Coverage for instance /register_test
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File register_test.sv
+------------------------------------IF Branch------------------------------------
+    58                                     10169     Count coming in to IF
+    58              1                        360     
+    60              1                       5001     
+                                            4808     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    93                                     10000     Count coming in to IF
+    93              1                        179     
+    98              1                       9821     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    100                                     9821     Count coming in to IF
+    100             1                       6396     
+                                            3425     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    116                                    10000     Count coming in to IF
+    116             1                       5007     
+                                            4993     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    117                                     5007     Count coming in to IF
+    117             1                    ***0***     
+                                            5007     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       6         5         1    83.33%
+
+================================Condition Details================================
+
+Condition Coverage for instance /register_test --
+
+  File register_test.sv
+----------------Focused Condition View-------------------
+Line       93 Item    1  ((reset_cooldown == 0) && ($urandom_range(0,99) < 5))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       100 Item    1  (reset_cooldown > 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       116 Item    1  (rst_ && enable)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       117 Item    1  (out !== expected)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+          Input Term   Covered  Reason for no coverage   Hint
+         -----------  --------  -----------------------  --------------
+  (out !== expected)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (out !== expected)_0  -                             
+  Row   2:    ***0***  (out !== expected)_1  -                             
+
+
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          9        na        na        na
+            Covergroup Bins        462       462         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /register_test/reg_cg                           100.00%        100          -    Covered              
+    covered/total bins:                                   462        462          -                      
+    missing/total bins:                                     0        462          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_enable                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_rst                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_data                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_out                                 100.00%        100          -    Covered              
+        covered/total bins:                               256        256          -                      
+        missing/total bins:                                 0        256          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint rst_                                   100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint enable                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint data                                   100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross en_x_data                                   100.00%        100          -    Covered              
+        covered/total bins:                               128        128          -                      
+        missing/total bins:                                 0        128          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross rst_x_en                                    100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/register_test/cg_inst          100.00%        100          -    Covered              
+    covered/total bins:                                   462        462          -                      
+    missing/total bins:                                     0        462          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_enable                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin en0                                          4913          1          -    Covered              
+        bin en1                                          5089          1          -    Covered              
+    Coverpoint cp_rst                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin rst0                                          180          1          -    Covered              
+        bin rst1                                         9822          1          -    Covered              
+    Coverpoint cp_data                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                           46          1          -    Covered              
+        bin ff                                             27          1          -    Covered              
+        default bin others                               9929                     -    Occurred             
+    Coverpoint cp_out                                 100.00%        100          -    Covered              
+        covered/total bins:                               256        256          -                      
+        missing/total bins:                                 0        256          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin all_vals[0]                                   559          1          -    Covered              
+        bin all_vals[1]                                    19          1          -    Covered              
+        bin all_vals[2]                                    36          1          -    Covered              
+        bin all_vals[3]                                    22          1          -    Covered              
+        bin all_vals[4]                                    44          1          -    Covered              
+        bin all_vals[5]                                    39          1          -    Covered              
+        bin all_vals[6]                                    30          1          -    Covered              
+        bin all_vals[7]                                    51          1          -    Covered              
+        bin all_vals[8]                                    29          1          -    Covered              
+        bin all_vals[9]                                    42          1          -    Covered              
+        bin all_vals[10]                                   35          1          -    Covered              
+        bin all_vals[11]                                   42          1          -    Covered              
+        bin all_vals[12]                                   38          1          -    Covered              
+        bin all_vals[13]                                   31          1          -    Covered              
+        bin all_vals[14]                                   41          1          -    Covered              
+        bin all_vals[15]                                   28          1          -    Covered              
+        bin all_vals[16]                                   46          1          -    Covered              
+        bin all_vals[17]                                   26          1          -    Covered              
+        bin all_vals[18]                                   52          1          -    Covered              
+        bin all_vals[19]                                   44          1          -    Covered              
+        bin all_vals[20]                                   46          1          -    Covered              
+        bin all_vals[21]                                   44          1          -    Covered              
+        bin all_vals[22]                                   22          1          -    Covered              
+        bin all_vals[23]                                   44          1          -    Covered              
+        bin all_vals[24]                                   22          1          -    Covered              
+        bin all_vals[25]                                   27          1          -    Covered              
+        bin all_vals[26]                                   28          1          -    Covered              
+        bin all_vals[27]                                   37          1          -    Covered              
+        bin all_vals[28]                                   34          1          -    Covered              
+        bin all_vals[29]                                   29          1          -    Covered              
+        bin all_vals[30]                                   29          1          -    Covered              
+        bin all_vals[31]                                   35          1          -    Covered              
+        bin all_vals[32]                                   24          1          -    Covered              
+        bin all_vals[33]                                   33          1          -    Covered              
+        bin all_vals[34]                                   37          1          -    Covered              
+        bin all_vals[35]                                   29          1          -    Covered              
+        bin all_vals[36]                                   49          1          -    Covered              
+        bin all_vals[37]                                   25          1          -    Covered              
+        bin all_vals[38]                                   42          1          -    Covered              
+        bin all_vals[39]                                   24          1          -    Covered              
+        bin all_vals[40]                                   37          1          -    Covered              
+        bin all_vals[41]                                   30          1          -    Covered              
+        bin all_vals[42]                                   32          1          -    Covered              
+        bin all_vals[43]                                   30          1          -    Covered              
+        bin all_vals[44]                                   35          1          -    Covered              
+        bin all_vals[45]                                   47          1          -    Covered              
+        bin all_vals[46]                                   34          1          -    Covered              
+        bin all_vals[47]                                   32          1          -    Covered              
+        bin all_vals[48]                                   54          1          -    Covered              
+        bin all_vals[49]                                   32          1          -    Covered              
+        bin all_vals[50]                                   22          1          -    Covered              
+        bin all_vals[51]                                   43          1          -    Covered              
+        bin all_vals[52]                                   42          1          -    Covered              
+        bin all_vals[53]                                   46          1          -    Covered              
+        bin all_vals[54]                                   52          1          -    Covered              
+        bin all_vals[55]                                   30          1          -    Covered              
+        bin all_vals[56]                                   55          1          -    Covered              
+        bin all_vals[57]                                   28          1          -    Covered              
+        bin all_vals[58]                                   47          1          -    Covered              
+        bin all_vals[59]                                   28          1          -    Covered              
+        bin all_vals[60]                                   45          1          -    Covered              
+        bin all_vals[61]                                   35          1          -    Covered              
+        bin all_vals[62]                                   44          1          -    Covered              
+        bin all_vals[63]                                   55          1          -    Covered              
+        bin all_vals[64]                                   49          1          -    Covered              
+        bin all_vals[65]                                   32          1          -    Covered              
+        bin all_vals[66]                                   27          1          -    Covered              
+        bin all_vals[67]                                   44          1          -    Covered              
+        bin all_vals[68]                                   61          1          -    Covered              
+        bin all_vals[69]                                   41          1          -    Covered              
+        bin all_vals[70]                                   37          1          -    Covered              
+        bin all_vals[71]                                   40          1          -    Covered              
+        bin all_vals[72]                                   43          1          -    Covered              
+        bin all_vals[73]                                   30          1          -    Covered              
+        bin all_vals[74]                                   31          1          -    Covered              
+        bin all_vals[75]                                   43          1          -    Covered              
+        bin all_vals[76]                                   37          1          -    Covered              
+        bin all_vals[77]                                   45          1          -    Covered              
+        bin all_vals[78]                                   33          1          -    Covered              
+        bin all_vals[79]                                   48          1          -    Covered              
+        bin all_vals[80]                                   18          1          -    Covered              
+        bin all_vals[81]                                   33          1          -    Covered              
+        bin all_vals[82]                                   38          1          -    Covered              
+        bin all_vals[83]                                   47          1          -    Covered              
+        bin all_vals[84]                                   47          1          -    Covered              
+        bin all_vals[85]                                   43          1          -    Covered              
+        bin all_vals[86]                                   55          1          -    Covered              
+        bin all_vals[87]                                   35          1          -    Covered              
+        bin all_vals[88]                                   42          1          -    Covered              
+        bin all_vals[89]                                   53          1          -    Covered              
+        bin all_vals[90]                                   45          1          -    Covered              
+        bin all_vals[91]                                   30          1          -    Covered              
+        bin all_vals[92]                                   25          1          -    Covered              
+        bin all_vals[93]                                   35          1          -    Covered              
+        bin all_vals[94]                                   32          1          -    Covered              
+        bin all_vals[95]                                   43          1          -    Covered              
+        bin all_vals[96]                                   29          1          -    Covered              
+        bin all_vals[97]                                   38          1          -    Covered              
+        bin all_vals[98]                                   26          1          -    Covered              
+        bin all_vals[99]                                   52          1          -    Covered              
+        bin all_vals[100]                                  14          1          -    Covered              
+        bin all_vals[101]                                  38          1          -    Covered              
+        bin all_vals[102]                                  53          1          -    Covered              
+        bin all_vals[103]                                  26          1          -    Covered              
+        bin all_vals[104]                                  53          1          -    Covered              
+        bin all_vals[105]                                  24          1          -    Covered              
+        bin all_vals[106]                                  51          1          -    Covered              
+        bin all_vals[107]                                  42          1          -    Covered              
+        bin all_vals[108]                                  27          1          -    Covered              
+        bin all_vals[109]                                  45          1          -    Covered              
+        bin all_vals[110]                                  32          1          -    Covered              
+        bin all_vals[111]                                  41          1          -    Covered              
+        bin all_vals[112]                                  48          1          -    Covered              
+        bin all_vals[113]                                  39          1          -    Covered              
+        bin all_vals[114]                                  26          1          -    Covered              
+        bin all_vals[115]                                  34          1          -    Covered              
+        bin all_vals[116]                                  41          1          -    Covered              
+        bin all_vals[117]                                  33          1          -    Covered              
+        bin all_vals[118]                                  27          1          -    Covered              
+        bin all_vals[119]                                  28          1          -    Covered              
+        bin all_vals[120]                                  20          1          -    Covered              
+        bin all_vals[121]                                  23          1          -    Covered              
+        bin all_vals[122]                                  21          1          -    Covered              
+        bin all_vals[123]                                  38          1          -    Covered              
+        bin all_vals[124]                                  37          1          -    Covered              
+        bin all_vals[125]                                  24          1          -    Covered              
+        bin all_vals[126]                                  18          1          -    Covered              
+        bin all_vals[127]                                  26          1          -    Covered              
+        bin all_vals[128]                                  39          1          -    Covered              
+        bin all_vals[129]                                  35          1          -    Covered              
+        bin all_vals[130]                                  38          1          -    Covered              
+        bin all_vals[131]                                  29          1          -    Covered              
+        bin all_vals[132]                                  41          1          -    Covered              
+        bin all_vals[133]                                  42          1          -    Covered              
+        bin all_vals[134]                                  23          1          -    Covered              
+        bin all_vals[135]                                  31          1          -    Covered              
+        bin all_vals[136]                                  52          1          -    Covered              
+        bin all_vals[137]                                  34          1          -    Covered              
+        bin all_vals[138]                                  43          1          -    Covered              
+        bin all_vals[139]                                  43          1          -    Covered              
+        bin all_vals[140]                                  44          1          -    Covered              
+        bin all_vals[141]                                  43          1          -    Covered              
+        bin all_vals[142]                                  23          1          -    Covered              
+        bin all_vals[143]                                  39          1          -    Covered              
+        bin all_vals[144]                                  32          1          -    Covered              
+        bin all_vals[145]                                  39          1          -    Covered              
+        bin all_vals[146]                                  23          1          -    Covered              
+        bin all_vals[147]                                  46          1          -    Covered              
+        bin all_vals[148]                                  36          1          -    Covered              
+        bin all_vals[149]                                  27          1          -    Covered              
+        bin all_vals[150]                                  46          1          -    Covered              
+        bin all_vals[151]                                  42          1          -    Covered              
+        bin all_vals[152]                                  48          1          -    Covered              
+        bin all_vals[153]                                  50          1          -    Covered              
+        bin all_vals[154]                                  40          1          -    Covered              
+        bin all_vals[155]                                  20          1          -    Covered              
+        bin all_vals[156]                                  46          1          -    Covered              
+        bin all_vals[157]                                  41          1          -    Covered              
+        bin all_vals[158]                                  17          1          -    Covered              
+        bin all_vals[159]                                  29          1          -    Covered              
+        bin all_vals[160]                                  27          1          -    Covered              
+        bin all_vals[161]                                  35          1          -    Covered              
+        bin all_vals[162]                                  37          1          -    Covered              
+        bin all_vals[163]                                  40          1          -    Covered              
+        bin all_vals[164]                                  23          1          -    Covered              
+        bin all_vals[165]                                  42          1          -    Covered              
+        bin all_vals[166]                                  41          1          -    Covered              
+        bin all_vals[167]                                  43          1          -    Covered              
+        bin all_vals[168]                                  42          1          -    Covered              
+        bin all_vals[169]                                  53          1          -    Covered              
+        bin all_vals[170]                                  40          1          -    Covered              
+        bin all_vals[171]                                  43          1          -    Covered              
+        bin all_vals[172]                                  32          1          -    Covered              
+        bin all_vals[173]                                  44          1          -    Covered              
+        bin all_vals[174]                                  38          1          -    Covered              
+        bin all_vals[175]                                  44          1          -    Covered              
+        bin all_vals[176]                                  42          1          -    Covered              
+        bin all_vals[177]                                  34          1          -    Covered              
+        bin all_vals[178]                                  21          1          -    Covered              
+        bin all_vals[179]                                  45          1          -    Covered              
+        bin all_vals[180]                                  44          1          -    Covered              
+        bin all_vals[181]                                  38          1          -    Covered              
+        bin all_vals[182]                                  48          1          -    Covered              
+        bin all_vals[183]                                  28          1          -    Covered              
+        bin all_vals[184]                                  33          1          -    Covered              
+        bin all_vals[185]                                  23          1          -    Covered              
+        bin all_vals[186]                                  40          1          -    Covered              
+        bin all_vals[187]                                  33          1          -    Covered              
+        bin all_vals[188]                                  40          1          -    Covered              
+        bin all_vals[189]                                  39          1          -    Covered              
+        bin all_vals[190]                                  44          1          -    Covered              
+        bin all_vals[191]                                  33          1          -    Covered              
+        bin all_vals[192]                                  36          1          -    Covered              
+        bin all_vals[193]                                  29          1          -    Covered              
+        bin all_vals[194]                                  36          1          -    Covered              
+        bin all_vals[195]                                  41          1          -    Covered              
+        bin all_vals[196]                                  33          1          -    Covered              
+        bin all_vals[197]                                  33          1          -    Covered              
+        bin all_vals[198]                                  24          1          -    Covered              
+        bin all_vals[199]                                  39          1          -    Covered              
+        bin all_vals[200]                                  37          1          -    Covered              
+        bin all_vals[201]                                  59          1          -    Covered              
+        bin all_vals[202]                                  25          1          -    Covered              
+        bin all_vals[203]                                  47          1          -    Covered              
+        bin all_vals[204]                                  55          1          -    Covered              
+        bin all_vals[205]                                  39          1          -    Covered              
+        bin all_vals[206]                                  32          1          -    Covered              
+        bin all_vals[207]                                  27          1          -    Covered              
+        bin all_vals[208]                                  37          1          -    Covered              
+        bin all_vals[209]                                  30          1          -    Covered              
+        bin all_vals[210]                                  30          1          -    Covered              
+        bin all_vals[211]                                  43          1          -    Covered              
+        bin all_vals[212]                                  22          1          -    Covered              
+        bin all_vals[213]                                  45          1          -    Covered              
+        bin all_vals[214]                                  34          1          -    Covered              
+        bin all_vals[215]                                  49          1          -    Covered              
+        bin all_vals[216]                                  39          1          -    Covered              
+        bin all_vals[217]                                  32          1          -    Covered              
+        bin all_vals[218]                                  38          1          -    Covered              
+        bin all_vals[219]                                  41          1          -    Covered              
+        bin all_vals[220]                                  41          1          -    Covered              
+        bin all_vals[221]                                  43          1          -    Covered              
+        bin all_vals[222]                                  34          1          -    Covered              
+        bin all_vals[223]                                  36          1          -    Covered              
+        bin all_vals[224]                                  40          1          -    Covered              
+        bin all_vals[225]                                  39          1          -    Covered              
+        bin all_vals[226]                                  32          1          -    Covered              
+        bin all_vals[227]                                  37          1          -    Covered              
+        bin all_vals[228]                                  52          1          -    Covered              
+        bin all_vals[229]                                  44          1          -    Covered              
+        bin all_vals[230]                                  61          1          -    Covered              
+        bin all_vals[231]                                  53          1          -    Covered              
+        bin all_vals[232]                                  45          1          -    Covered              
+        bin all_vals[233]                                  44          1          -    Covered              
+        bin all_vals[234]                                  39          1          -    Covered              
+        bin all_vals[235]                                  37          1          -    Covered              
+        bin all_vals[236]                                  41          1          -    Covered              
+        bin all_vals[237]                                  32          1          -    Covered              
+        bin all_vals[238]                                  37          1          -    Covered              
+        bin all_vals[239]                                  29          1          -    Covered              
+        bin all_vals[240]                                  40          1          -    Covered              
+        bin all_vals[241]                                  33          1          -    Covered              
+        bin all_vals[242]                                  47          1          -    Covered              
+        bin all_vals[243]                                  46          1          -    Covered              
+        bin all_vals[244]                                  39          1          -    Covered              
+        bin all_vals[245]                                  43          1          -    Covered              
+        bin all_vals[246]                                  29          1          -    Covered              
+        bin all_vals[247]                                  18          1          -    Covered              
+        bin all_vals[248]                                  35          1          -    Covered              
+        bin all_vals[249]                                  38          1          -    Covered              
+        bin all_vals[250]                                  30          1          -    Covered              
+        bin all_vals[251]                                  40          1          -    Covered              
+        bin all_vals[252]                                  45          1          -    Covered              
+        bin all_vals[253]                                  28          1          -    Covered              
+        bin all_vals[254]                                  47          1          -    Covered              
+        bin all_vals[255]                                  21          1          -    Covered              
+    Coverpoint rst_                                   100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                       180          1          -    Covered              
+        bin auto[1]                                      9822          1          -    Covered              
+    Coverpoint enable                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      4913          1          -    Covered              
+        bin auto[1]                                      5089          1          -    Covered              
+    Coverpoint data                                   100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0:3]                                     159          1          -    Covered              
+        bin auto[4:7]                                     170          1          -    Covered              
+        bin auto[8:11]                                    166          1          -    Covered              
+        bin auto[12:15]                                   149          1          -    Covered              
+        bin auto[16:19]                                   153          1          -    Covered              
+        bin auto[20:23]                                   143          1          -    Covered              
+        bin auto[24:27]                                   158          1          -    Covered              
+        bin auto[28:31]                                   143          1          -    Covered              
+        bin auto[32:35]                                   154          1          -    Covered              
+        bin auto[36:39]                                   155          1          -    Covered              
+        bin auto[40:43]                                   165          1          -    Covered              
+        bin auto[44:47]                                   155          1          -    Covered              
+        bin auto[48:51]                                   156          1          -    Covered              
+        bin auto[52:55]                                   175          1          -    Covered              
+        bin auto[56:59]                                   161          1          -    Covered              
+        bin auto[60:63]                                   152          1          -    Covered              
+        bin auto[64:67]                                   138          1          -    Covered              
+        bin auto[68:71]                                   169          1          -    Covered              
+        bin auto[72:75]                                   158          1          -    Covered              
+        bin auto[76:79]                                   169          1          -    Covered              
+        bin auto[80:83]                                   158          1          -    Covered              
+        bin auto[84:87]                                   154          1          -    Covered              
+        bin auto[88:91]                                   160          1          -    Covered              
+        bin auto[92:95]                                   164          1          -    Covered              
+        bin auto[96:99]                                   159          1          -    Covered              
+        bin auto[100:103]                                 149          1          -    Covered              
+        bin auto[104:107]                                 175          1          -    Covered              
+        bin auto[108:111]                                 157          1          -    Covered              
+        bin auto[112:115]                                 151          1          -    Covered              
+        bin auto[116:119]                                 147          1          -    Covered              
+        bin auto[120:123]                                 140          1          -    Covered              
+        bin auto[124:127]                                 139          1          -    Covered              
+        bin auto[128:131]                                 161          1          -    Covered              
+        bin auto[132:135]                                 159          1          -    Covered              
+        bin auto[136:139]                                 185          1          -    Covered              
+        bin auto[140:143]                                 170          1          -    Covered              
+        bin auto[144:147]                                 145          1          -    Covered              
+        bin auto[148:151]                                 161          1          -    Covered              
+        bin auto[152:155]                                 164          1          -    Covered              
+        bin auto[156:159]                                 148          1          -    Covered              
+        bin auto[160:163]                                 126          1          -    Covered              
+        bin auto[164:167]                                 139          1          -    Covered              
+        bin auto[168:171]                                 167          1          -    Covered              
+        bin auto[172:175]                                 174          1          -    Covered              
+        bin auto[176:179]                                 159          1          -    Covered              
+        bin auto[180:183]                                 163          1          -    Covered              
+        bin auto[184:187]                                 143          1          -    Covered              
+        bin auto[188:191]                                 169          1          -    Covered              
+        bin auto[192:195]                                 153          1          -    Covered              
+        bin auto[196:199]                                 154          1          -    Covered              
+        bin auto[200:203]                                 162          1          -    Covered              
+        bin auto[204:207]                                 154          1          -    Covered              
+        bin auto[208:211]                                 149          1          -    Covered              
+        bin auto[212:215]                                 154          1          -    Covered              
+        bin auto[216:219]                                 146          1          -    Covered              
+        bin auto[220:223]                                 146          1          -    Covered              
+        bin auto[224:227]                                 144          1          -    Covered              
+        bin auto[228:231]                                 172          1          -    Covered              
+        bin auto[232:235]                                 159          1          -    Covered              
+        bin auto[236:239]                                 161          1          -    Covered              
+        bin auto[240:243]                                 154          1          -    Covered              
+        bin auto[244:247]                                 162          1          -    Covered              
+        bin auto[248:251]                                 154          1          -    Covered              
+        bin auto[252:255]                                 144          1          -    Covered              
+    Cross en_x_data                                   100.00%        100          -    Covered              
+        covered/total bins:                               128        128          -                      
+        missing/total bins:                                 0        128          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[252:255]>                    75          1          -    Covered              
+            bin <auto[0],auto[252:255]>                    69          1          -    Covered              
+            bin <auto[1],auto[248:251]>                    87          1          -    Covered              
+            bin <auto[0],auto[248:251]>                    67          1          -    Covered              
+            bin <auto[1],auto[244:247]>                    74          1          -    Covered              
+            bin <auto[0],auto[244:247]>                    88          1          -    Covered              
+            bin <auto[1],auto[240:243]>                    82          1          -    Covered              
+            bin <auto[0],auto[240:243]>                    72          1          -    Covered              
+            bin <auto[1],auto[236:239]>                    77          1          -    Covered              
+            bin <auto[0],auto[236:239]>                    84          1          -    Covered              
+            bin <auto[1],auto[232:235]>                    82          1          -    Covered              
+            bin <auto[0],auto[232:235]>                    77          1          -    Covered              
+            bin <auto[1],auto[228:231]>                   101          1          -    Covered              
+            bin <auto[0],auto[228:231]>                    71          1          -    Covered              
+            bin <auto[1],auto[224:227]>                    79          1          -    Covered              
+            bin <auto[0],auto[224:227]>                    65          1          -    Covered              
+            bin <auto[1],auto[220:223]>                    84          1          -    Covered              
+            bin <auto[0],auto[220:223]>                    62          1          -    Covered              
+            bin <auto[1],auto[216:219]>                    76          1          -    Covered              
+            bin <auto[0],auto[216:219]>                    70          1          -    Covered              
+            bin <auto[1],auto[212:215]>                    79          1          -    Covered              
+            bin <auto[0],auto[212:215]>                    75          1          -    Covered              
+            bin <auto[1],auto[208:211]>                    75          1          -    Covered              
+            bin <auto[0],auto[208:211]>                    74          1          -    Covered              
+            bin <auto[1],auto[204:207]>                    83          1          -    Covered              
+            bin <auto[0],auto[204:207]>                    71          1          -    Covered              
+            bin <auto[1],auto[200:203]>                    76          1          -    Covered              
+            bin <auto[0],auto[200:203]>                    86          1          -    Covered              
+            bin <auto[1],auto[196:199]>                    74          1          -    Covered              
+            bin <auto[0],auto[196:199]>                    80          1          -    Covered              
+            bin <auto[1],auto[192:195]>                    81          1          -    Covered              
+            bin <auto[0],auto[192:195]>                    72          1          -    Covered              
+            bin <auto[1],auto[188:191]>                    82          1          -    Covered              
+            bin <auto[0],auto[188:191]>                    87          1          -    Covered              
+            bin <auto[1],auto[184:187]>                    72          1          -    Covered              
+            bin <auto[0],auto[184:187]>                    71          1          -    Covered              
+            bin <auto[1],auto[180:183]>                    85          1          -    Covered              
+            bin <auto[0],auto[180:183]>                    78          1          -    Covered              
+            bin <auto[1],auto[176:179]>                    79          1          -    Covered              
+            bin <auto[0],auto[176:179]>                    80          1          -    Covered              
+            bin <auto[1],auto[172:175]>                    84          1          -    Covered              
+            bin <auto[0],auto[172:175]>                    90          1          -    Covered              
+            bin <auto[1],auto[168:171]>                    96          1          -    Covered              
+            bin <auto[0],auto[168:171]>                    71          1          -    Covered              
+            bin <auto[1],auto[164:167]>                    66          1          -    Covered              
+            bin <auto[0],auto[164:167]>                    73          1          -    Covered              
+            bin <auto[1],auto[160:163]>                    76          1          -    Covered              
+            bin <auto[0],auto[160:163]>                    50          1          -    Covered              
+            bin <auto[1],auto[156:159]>                    72          1          -    Covered              
+            bin <auto[0],auto[156:159]>                    76          1          -    Covered              
+            bin <auto[1],auto[152:155]>                    84          1          -    Covered              
+            bin <auto[0],auto[152:155]>                    80          1          -    Covered              
+            bin <auto[1],auto[148:151]>                    86          1          -    Covered              
+            bin <auto[0],auto[148:151]>                    75          1          -    Covered              
+            bin <auto[1],auto[144:147]>                    75          1          -    Covered              
+            bin <auto[0],auto[144:147]>                    70          1          -    Covered              
+            bin <auto[1],auto[140:143]>                    80          1          -    Covered              
+            bin <auto[0],auto[140:143]>                    90          1          -    Covered              
+            bin <auto[1],auto[136:139]>                    94          1          -    Covered              
+            bin <auto[0],auto[136:139]>                    91          1          -    Covered              
+            bin <auto[1],auto[132:135]>                    76          1          -    Covered              
+            bin <auto[0],auto[132:135]>                    83          1          -    Covered              
+            bin <auto[1],auto[128:131]>                    80          1          -    Covered              
+            bin <auto[0],auto[128:131]>                    81          1          -    Covered              
+            bin <auto[1],auto[124:127]>                    57          1          -    Covered              
+            bin <auto[0],auto[124:127]>                    82          1          -    Covered              
+            bin <auto[1],auto[120:123]>                    63          1          -    Covered              
+            bin <auto[0],auto[120:123]>                    77          1          -    Covered              
+            bin <auto[1],auto[116:119]>                    67          1          -    Covered              
+            bin <auto[0],auto[116:119]>                    80          1          -    Covered              
+            bin <auto[1],auto[112:115]>                    76          1          -    Covered              
+            bin <auto[0],auto[112:115]>                    75          1          -    Covered              
+            bin <auto[1],auto[108:111]>                    79          1          -    Covered              
+            bin <auto[0],auto[108:111]>                    78          1          -    Covered              
+            bin <auto[1],auto[104:107]>                    97          1          -    Covered              
+            bin <auto[0],auto[104:107]>                    78          1          -    Covered              
+            bin <auto[1],auto[100:103]>                    78          1          -    Covered              
+            bin <auto[0],auto[100:103]>                    71          1          -    Covered              
+            bin <auto[1],auto[96:99]>                      82          1          -    Covered              
+            bin <auto[0],auto[96:99]>                      77          1          -    Covered              
+            bin <auto[1],auto[92:95]>                      83          1          -    Covered              
+            bin <auto[0],auto[92:95]>                      81          1          -    Covered              
+            bin <auto[1],auto[88:91]>                      81          1          -    Covered              
+            bin <auto[0],auto[88:91]>                      79          1          -    Covered              
+            bin <auto[1],auto[84:87]>                      78          1          -    Covered              
+            bin <auto[0],auto[84:87]>                      76          1          -    Covered              
+            bin <auto[1],auto[80:83]>                      78          1          -    Covered              
+            bin <auto[0],auto[80:83]>                      80          1          -    Covered              
+            bin <auto[1],auto[76:79]>                      85          1          -    Covered              
+            bin <auto[0],auto[76:79]>                      84          1          -    Covered              
+            bin <auto[1],auto[72:75]>                      81          1          -    Covered              
+            bin <auto[0],auto[72:75]>                      77          1          -    Covered              
+            bin <auto[1],auto[68:71]>                      93          1          -    Covered              
+            bin <auto[0],auto[68:71]>                      76          1          -    Covered              
+            bin <auto[1],auto[64:67]>                      80          1          -    Covered              
+            bin <auto[0],auto[64:67]>                      58          1          -    Covered              
+            bin <auto[1],auto[60:63]>                      86          1          -    Covered              
+            bin <auto[0],auto[60:63]>                      66          1          -    Covered              
+            bin <auto[1],auto[56:59]>                      81          1          -    Covered              
+            bin <auto[0],auto[56:59]>                      80          1          -    Covered              
+            bin <auto[1],auto[52:55]>                      92          1          -    Covered              
+            bin <auto[0],auto[52:55]>                      83          1          -    Covered              
+            bin <auto[1],auto[48:51]>                      79          1          -    Covered              
+            bin <auto[0],auto[48:51]>                      77          1          -    Covered              
+            bin <auto[1],auto[44:47]>                      81          1          -    Covered              
+            bin <auto[0],auto[44:47]>                      74          1          -    Covered              
+            bin <auto[1],auto[40:43]>                      74          1          -    Covered              
+            bin <auto[0],auto[40:43]>                      91          1          -    Covered              
+            bin <auto[1],auto[36:39]>                      75          1          -    Covered              
+            bin <auto[0],auto[36:39]>                      80          1          -    Covered              
+            bin <auto[1],auto[32:35]>                      77          1          -    Covered              
+            bin <auto[0],auto[32:35]>                      77          1          -    Covered              
+            bin <auto[1],auto[28:31]>                      67          1          -    Covered              
+            bin <auto[0],auto[28:31]>                      76          1          -    Covered              
+            bin <auto[1],auto[24:27]>                      66          1          -    Covered              
+            bin <auto[0],auto[24:27]>                      92          1          -    Covered              
+            bin <auto[1],auto[20:23]>                      79          1          -    Covered              
+            bin <auto[0],auto[20:23]>                      64          1          -    Covered              
+            bin <auto[1],auto[16:19]>                      82          1          -    Covered              
+            bin <auto[0],auto[16:19]>                      71          1          -    Covered              
+            bin <auto[1],auto[12:15]>                      75          1          -    Covered              
+            bin <auto[0],auto[12:15]>                      74          1          -    Covered              
+            bin <auto[1],auto[8:11]>                       80          1          -    Covered              
+            bin <auto[0],auto[8:11]>                       86          1          -    Covered              
+            bin <auto[1],auto[4:7]>                        97          1          -    Covered              
+            bin <auto[0],auto[4:7]>                        73          1          -    Covered              
+            bin <auto[1],auto[0:3]>                        68          1          -    Covered              
+            bin <auto[0],auto[0:3]>                        91          1          -    Covered              
+    Cross rst_x_en                                    100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                        5007          1          -    Covered              
+            bin <auto[0],auto[1]>                          82          1          -    Covered              
+            bin <auto[1],auto[0]>                        4815          1          -    Covered              
+            bin <auto[0],auto[0]>                          98          1          -    Covered              
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      27        24         3    88.88%
+
+================================Statement Details================================
+
+Statement Coverage for instance /register_test --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File register_test.sv
+    13              1                      20004     
+    13              2                      20003     
+    49              1                          1     
+    57              1                      10169     
+    59              1                        360     
+    61              1                       5001     
+    76              1                          1     
+    77              1                          1     
+    78              1                          1     
+    80              1                          1     
+    81              1                          1     
+    83              1                          1     
+    85              1                          1     
+    85              2                      10000     
+    90              1                      10000     
+    95              1                        179     
+    96              1                        179     
+    99              1                       9821     
+    101             1                       6396     
+    105             1                      10000     
+    106             1                      10000     
+    111             1                      10000     
+    118             1                    ***0***     
+    119             1                    ***0***     
+    121             1                    ***0***     
+    127             1                          1     
+    128             1                          1     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        118        66        52    55.93%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /register_test --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                              reset_cooldown[6-31]           0           0        0.00 
+
+Total Node Count     =         59 
+Toggled Node Count   =         33 
+Untoggled Node Count =         26 
+
+Toggle Coverage      =      55.93% (66 of 118 bins)
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /register_test/reg_cg                           100.00%        100          -    Covered              
+    covered/total bins:                                   462        462          -                      
+    missing/total bins:                                     0        462          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_enable                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_rst                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_data                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_out                                 100.00%        100          -    Covered              
+        covered/total bins:                               256        256          -                      
+        missing/total bins:                                 0        256          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint rst_                                   100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint enable                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint data                                   100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross en_x_data                                   100.00%        100          -    Covered              
+        covered/total bins:                               128        128          -                      
+        missing/total bins:                                 0        128          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross rst_x_en                                    100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/register_test/cg_inst          100.00%        100          -    Covered              
+    covered/total bins:                                   462        462          -                      
+    missing/total bins:                                     0        462          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_enable                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin en0                                          4913          1          -    Covered              
+        bin en1                                          5089          1          -    Covered              
+    Coverpoint cp_rst                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin rst0                                          180          1          -    Covered              
+        bin rst1                                         9822          1          -    Covered              
+    Coverpoint cp_data                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin zero                                           46          1          -    Covered              
+        bin ff                                             27          1          -    Covered              
+        default bin others                               9929                     -    Occurred             
+    Coverpoint cp_out                                 100.00%        100          -    Covered              
+        covered/total bins:                               256        256          -                      
+        missing/total bins:                                 0        256          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin all_vals[0]                                   559          1          -    Covered              
+        bin all_vals[1]                                    19          1          -    Covered              
+        bin all_vals[2]                                    36          1          -    Covered              
+        bin all_vals[3]                                    22          1          -    Covered              
+        bin all_vals[4]                                    44          1          -    Covered              
+        bin all_vals[5]                                    39          1          -    Covered              
+        bin all_vals[6]                                    30          1          -    Covered              
+        bin all_vals[7]                                    51          1          -    Covered              
+        bin all_vals[8]                                    29          1          -    Covered              
+        bin all_vals[9]                                    42          1          -    Covered              
+        bin all_vals[10]                                   35          1          -    Covered              
+        bin all_vals[11]                                   42          1          -    Covered              
+        bin all_vals[12]                                   38          1          -    Covered              
+        bin all_vals[13]                                   31          1          -    Covered              
+        bin all_vals[14]                                   41          1          -    Covered              
+        bin all_vals[15]                                   28          1          -    Covered              
+        bin all_vals[16]                                   46          1          -    Covered              
+        bin all_vals[17]                                   26          1          -    Covered              
+        bin all_vals[18]                                   52          1          -    Covered              
+        bin all_vals[19]                                   44          1          -    Covered              
+        bin all_vals[20]                                   46          1          -    Covered              
+        bin all_vals[21]                                   44          1          -    Covered              
+        bin all_vals[22]                                   22          1          -    Covered              
+        bin all_vals[23]                                   44          1          -    Covered              
+        bin all_vals[24]                                   22          1          -    Covered              
+        bin all_vals[25]                                   27          1          -    Covered              
+        bin all_vals[26]                                   28          1          -    Covered              
+        bin all_vals[27]                                   37          1          -    Covered              
+        bin all_vals[28]                                   34          1          -    Covered              
+        bin all_vals[29]                                   29          1          -    Covered              
+        bin all_vals[30]                                   29          1          -    Covered              
+        bin all_vals[31]                                   35          1          -    Covered              
+        bin all_vals[32]                                   24          1          -    Covered              
+        bin all_vals[33]                                   33          1          -    Covered              
+        bin all_vals[34]                                   37          1          -    Covered              
+        bin all_vals[35]                                   29          1          -    Covered              
+        bin all_vals[36]                                   49          1          -    Covered              
+        bin all_vals[37]                                   25          1          -    Covered              
+        bin all_vals[38]                                   42          1          -    Covered              
+        bin all_vals[39]                                   24          1          -    Covered              
+        bin all_vals[40]                                   37          1          -    Covered              
+        bin all_vals[41]                                   30          1          -    Covered              
+        bin all_vals[42]                                   32          1          -    Covered              
+        bin all_vals[43]                                   30          1          -    Covered              
+        bin all_vals[44]                                   35          1          -    Covered              
+        bin all_vals[45]                                   47          1          -    Covered              
+        bin all_vals[46]                                   34          1          -    Covered              
+        bin all_vals[47]                                   32          1          -    Covered              
+        bin all_vals[48]                                   54          1          -    Covered              
+        bin all_vals[49]                                   32          1          -    Covered              
+        bin all_vals[50]                                   22          1          -    Covered              
+        bin all_vals[51]                                   43          1          -    Covered              
+        bin all_vals[52]                                   42          1          -    Covered              
+        bin all_vals[53]                                   46          1          -    Covered              
+        bin all_vals[54]                                   52          1          -    Covered              
+        bin all_vals[55]                                   30          1          -    Covered              
+        bin all_vals[56]                                   55          1          -    Covered              
+        bin all_vals[57]                                   28          1          -    Covered              
+        bin all_vals[58]                                   47          1          -    Covered              
+        bin all_vals[59]                                   28          1          -    Covered              
+        bin all_vals[60]                                   45          1          -    Covered              
+        bin all_vals[61]                                   35          1          -    Covered              
+        bin all_vals[62]                                   44          1          -    Covered              
+        bin all_vals[63]                                   55          1          -    Covered              
+        bin all_vals[64]                                   49          1          -    Covered              
+        bin all_vals[65]                                   32          1          -    Covered              
+        bin all_vals[66]                                   27          1          -    Covered              
+        bin all_vals[67]                                   44          1          -    Covered              
+        bin all_vals[68]                                   61          1          -    Covered              
+        bin all_vals[69]                                   41          1          -    Covered              
+        bin all_vals[70]                                   37          1          -    Covered              
+        bin all_vals[71]                                   40          1          -    Covered              
+        bin all_vals[72]                                   43          1          -    Covered              
+        bin all_vals[73]                                   30          1          -    Covered              
+        bin all_vals[74]                                   31          1          -    Covered              
+        bin all_vals[75]                                   43          1          -    Covered              
+        bin all_vals[76]                                   37          1          -    Covered              
+        bin all_vals[77]                                   45          1          -    Covered              
+        bin all_vals[78]                                   33          1          -    Covered              
+        bin all_vals[79]                                   48          1          -    Covered              
+        bin all_vals[80]                                   18          1          -    Covered              
+        bin all_vals[81]                                   33          1          -    Covered              
+        bin all_vals[82]                                   38          1          -    Covered              
+        bin all_vals[83]                                   47          1          -    Covered              
+        bin all_vals[84]                                   47          1          -    Covered              
+        bin all_vals[85]                                   43          1          -    Covered              
+        bin all_vals[86]                                   55          1          -    Covered              
+        bin all_vals[87]                                   35          1          -    Covered              
+        bin all_vals[88]                                   42          1          -    Covered              
+        bin all_vals[89]                                   53          1          -    Covered              
+        bin all_vals[90]                                   45          1          -    Covered              
+        bin all_vals[91]                                   30          1          -    Covered              
+        bin all_vals[92]                                   25          1          -    Covered              
+        bin all_vals[93]                                   35          1          -    Covered              
+        bin all_vals[94]                                   32          1          -    Covered              
+        bin all_vals[95]                                   43          1          -    Covered              
+        bin all_vals[96]                                   29          1          -    Covered              
+        bin all_vals[97]                                   38          1          -    Covered              
+        bin all_vals[98]                                   26          1          -    Covered              
+        bin all_vals[99]                                   52          1          -    Covered              
+        bin all_vals[100]                                  14          1          -    Covered              
+        bin all_vals[101]                                  38          1          -    Covered              
+        bin all_vals[102]                                  53          1          -    Covered              
+        bin all_vals[103]                                  26          1          -    Covered              
+        bin all_vals[104]                                  53          1          -    Covered              
+        bin all_vals[105]                                  24          1          -    Covered              
+        bin all_vals[106]                                  51          1          -    Covered              
+        bin all_vals[107]                                  42          1          -    Covered              
+        bin all_vals[108]                                  27          1          -    Covered              
+        bin all_vals[109]                                  45          1          -    Covered              
+        bin all_vals[110]                                  32          1          -    Covered              
+        bin all_vals[111]                                  41          1          -    Covered              
+        bin all_vals[112]                                  48          1          -    Covered              
+        bin all_vals[113]                                  39          1          -    Covered              
+        bin all_vals[114]                                  26          1          -    Covered              
+        bin all_vals[115]                                  34          1          -    Covered              
+        bin all_vals[116]                                  41          1          -    Covered              
+        bin all_vals[117]                                  33          1          -    Covered              
+        bin all_vals[118]                                  27          1          -    Covered              
+        bin all_vals[119]                                  28          1          -    Covered              
+        bin all_vals[120]                                  20          1          -    Covered              
+        bin all_vals[121]                                  23          1          -    Covered              
+        bin all_vals[122]                                  21          1          -    Covered              
+        bin all_vals[123]                                  38          1          -    Covered              
+        bin all_vals[124]                                  37          1          -    Covered              
+        bin all_vals[125]                                  24          1          -    Covered              
+        bin all_vals[126]                                  18          1          -    Covered              
+        bin all_vals[127]                                  26          1          -    Covered              
+        bin all_vals[128]                                  39          1          -    Covered              
+        bin all_vals[129]                                  35          1          -    Covered              
+        bin all_vals[130]                                  38          1          -    Covered              
+        bin all_vals[131]                                  29          1          -    Covered              
+        bin all_vals[132]                                  41          1          -    Covered              
+        bin all_vals[133]                                  42          1          -    Covered              
+        bin all_vals[134]                                  23          1          -    Covered              
+        bin all_vals[135]                                  31          1          -    Covered              
+        bin all_vals[136]                                  52          1          -    Covered              
+        bin all_vals[137]                                  34          1          -    Covered              
+        bin all_vals[138]                                  43          1          -    Covered              
+        bin all_vals[139]                                  43          1          -    Covered              
+        bin all_vals[140]                                  44          1          -    Covered              
+        bin all_vals[141]                                  43          1          -    Covered              
+        bin all_vals[142]                                  23          1          -    Covered              
+        bin all_vals[143]                                  39          1          -    Covered              
+        bin all_vals[144]                                  32          1          -    Covered              
+        bin all_vals[145]                                  39          1          -    Covered              
+        bin all_vals[146]                                  23          1          -    Covered              
+        bin all_vals[147]                                  46          1          -    Covered              
+        bin all_vals[148]                                  36          1          -    Covered              
+        bin all_vals[149]                                  27          1          -    Covered              
+        bin all_vals[150]                                  46          1          -    Covered              
+        bin all_vals[151]                                  42          1          -    Covered              
+        bin all_vals[152]                                  48          1          -    Covered              
+        bin all_vals[153]                                  50          1          -    Covered              
+        bin all_vals[154]                                  40          1          -    Covered              
+        bin all_vals[155]                                  20          1          -    Covered              
+        bin all_vals[156]                                  46          1          -    Covered              
+        bin all_vals[157]                                  41          1          -    Covered              
+        bin all_vals[158]                                  17          1          -    Covered              
+        bin all_vals[159]                                  29          1          -    Covered              
+        bin all_vals[160]                                  27          1          -    Covered              
+        bin all_vals[161]                                  35          1          -    Covered              
+        bin all_vals[162]                                  37          1          -    Covered              
+        bin all_vals[163]                                  40          1          -    Covered              
+        bin all_vals[164]                                  23          1          -    Covered              
+        bin all_vals[165]                                  42          1          -    Covered              
+        bin all_vals[166]                                  41          1          -    Covered              
+        bin all_vals[167]                                  43          1          -    Covered              
+        bin all_vals[168]                                  42          1          -    Covered              
+        bin all_vals[169]                                  53          1          -    Covered              
+        bin all_vals[170]                                  40          1          -    Covered              
+        bin all_vals[171]                                  43          1          -    Covered              
+        bin all_vals[172]                                  32          1          -    Covered              
+        bin all_vals[173]                                  44          1          -    Covered              
+        bin all_vals[174]                                  38          1          -    Covered              
+        bin all_vals[175]                                  44          1          -    Covered              
+        bin all_vals[176]                                  42          1          -    Covered              
+        bin all_vals[177]                                  34          1          -    Covered              
+        bin all_vals[178]                                  21          1          -    Covered              
+        bin all_vals[179]                                  45          1          -    Covered              
+        bin all_vals[180]                                  44          1          -    Covered              
+        bin all_vals[181]                                  38          1          -    Covered              
+        bin all_vals[182]                                  48          1          -    Covered              
+        bin all_vals[183]                                  28          1          -    Covered              
+        bin all_vals[184]                                  33          1          -    Covered              
+        bin all_vals[185]                                  23          1          -    Covered              
+        bin all_vals[186]                                  40          1          -    Covered              
+        bin all_vals[187]                                  33          1          -    Covered              
+        bin all_vals[188]                                  40          1          -    Covered              
+        bin all_vals[189]                                  39          1          -    Covered              
+        bin all_vals[190]                                  44          1          -    Covered              
+        bin all_vals[191]                                  33          1          -    Covered              
+        bin all_vals[192]                                  36          1          -    Covered              
+        bin all_vals[193]                                  29          1          -    Covered              
+        bin all_vals[194]                                  36          1          -    Covered              
+        bin all_vals[195]                                  41          1          -    Covered              
+        bin all_vals[196]                                  33          1          -    Covered              
+        bin all_vals[197]                                  33          1          -    Covered              
+        bin all_vals[198]                                  24          1          -    Covered              
+        bin all_vals[199]                                  39          1          -    Covered              
+        bin all_vals[200]                                  37          1          -    Covered              
+        bin all_vals[201]                                  59          1          -    Covered              
+        bin all_vals[202]                                  25          1          -    Covered              
+        bin all_vals[203]                                  47          1          -    Covered              
+        bin all_vals[204]                                  55          1          -    Covered              
+        bin all_vals[205]                                  39          1          -    Covered              
+        bin all_vals[206]                                  32          1          -    Covered              
+        bin all_vals[207]                                  27          1          -    Covered              
+        bin all_vals[208]                                  37          1          -    Covered              
+        bin all_vals[209]                                  30          1          -    Covered              
+        bin all_vals[210]                                  30          1          -    Covered              
+        bin all_vals[211]                                  43          1          -    Covered              
+        bin all_vals[212]                                  22          1          -    Covered              
+        bin all_vals[213]                                  45          1          -    Covered              
+        bin all_vals[214]                                  34          1          -    Covered              
+        bin all_vals[215]                                  49          1          -    Covered              
+        bin all_vals[216]                                  39          1          -    Covered              
+        bin all_vals[217]                                  32          1          -    Covered              
+        bin all_vals[218]                                  38          1          -    Covered              
+        bin all_vals[219]                                  41          1          -    Covered              
+        bin all_vals[220]                                  41          1          -    Covered              
+        bin all_vals[221]                                  43          1          -    Covered              
+        bin all_vals[222]                                  34          1          -    Covered              
+        bin all_vals[223]                                  36          1          -    Covered              
+        bin all_vals[224]                                  40          1          -    Covered              
+        bin all_vals[225]                                  39          1          -    Covered              
+        bin all_vals[226]                                  32          1          -    Covered              
+        bin all_vals[227]                                  37          1          -    Covered              
+        bin all_vals[228]                                  52          1          -    Covered              
+        bin all_vals[229]                                  44          1          -    Covered              
+        bin all_vals[230]                                  61          1          -    Covered              
+        bin all_vals[231]                                  53          1          -    Covered              
+        bin all_vals[232]                                  45          1          -    Covered              
+        bin all_vals[233]                                  44          1          -    Covered              
+        bin all_vals[234]                                  39          1          -    Covered              
+        bin all_vals[235]                                  37          1          -    Covered              
+        bin all_vals[236]                                  41          1          -    Covered              
+        bin all_vals[237]                                  32          1          -    Covered              
+        bin all_vals[238]                                  37          1          -    Covered              
+        bin all_vals[239]                                  29          1          -    Covered              
+        bin all_vals[240]                                  40          1          -    Covered              
+        bin all_vals[241]                                  33          1          -    Covered              
+        bin all_vals[242]                                  47          1          -    Covered              
+        bin all_vals[243]                                  46          1          -    Covered              
+        bin all_vals[244]                                  39          1          -    Covered              
+        bin all_vals[245]                                  43          1          -    Covered              
+        bin all_vals[246]                                  29          1          -    Covered              
+        bin all_vals[247]                                  18          1          -    Covered              
+        bin all_vals[248]                                  35          1          -    Covered              
+        bin all_vals[249]                                  38          1          -    Covered              
+        bin all_vals[250]                                  30          1          -    Covered              
+        bin all_vals[251]                                  40          1          -    Covered              
+        bin all_vals[252]                                  45          1          -    Covered              
+        bin all_vals[253]                                  28          1          -    Covered              
+        bin all_vals[254]                                  47          1          -    Covered              
+        bin all_vals[255]                                  21          1          -    Covered              
+    Coverpoint rst_                                   100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                       180          1          -    Covered              
+        bin auto[1]                                      9822          1          -    Covered              
+    Coverpoint enable                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      4913          1          -    Covered              
+        bin auto[1]                                      5089          1          -    Covered              
+    Coverpoint data                                   100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0:3]                                     159          1          -    Covered              
+        bin auto[4:7]                                     170          1          -    Covered              
+        bin auto[8:11]                                    166          1          -    Covered              
+        bin auto[12:15]                                   149          1          -    Covered              
+        bin auto[16:19]                                   153          1          -    Covered              
+        bin auto[20:23]                                   143          1          -    Covered              
+        bin auto[24:27]                                   158          1          -    Covered              
+        bin auto[28:31]                                   143          1          -    Covered              
+        bin auto[32:35]                                   154          1          -    Covered              
+        bin auto[36:39]                                   155          1          -    Covered              
+        bin auto[40:43]                                   165          1          -    Covered              
+        bin auto[44:47]                                   155          1          -    Covered              
+        bin auto[48:51]                                   156          1          -    Covered              
+        bin auto[52:55]                                   175          1          -    Covered              
+        bin auto[56:59]                                   161          1          -    Covered              
+        bin auto[60:63]                                   152          1          -    Covered              
+        bin auto[64:67]                                   138          1          -    Covered              
+        bin auto[68:71]                                   169          1          -    Covered              
+        bin auto[72:75]                                   158          1          -    Covered              
+        bin auto[76:79]                                   169          1          -    Covered              
+        bin auto[80:83]                                   158          1          -    Covered              
+        bin auto[84:87]                                   154          1          -    Covered              
+        bin auto[88:91]                                   160          1          -    Covered              
+        bin auto[92:95]                                   164          1          -    Covered              
+        bin auto[96:99]                                   159          1          -    Covered              
+        bin auto[100:103]                                 149          1          -    Covered              
+        bin auto[104:107]                                 175          1          -    Covered              
+        bin auto[108:111]                                 157          1          -    Covered              
+        bin auto[112:115]                                 151          1          -    Covered              
+        bin auto[116:119]                                 147          1          -    Covered              
+        bin auto[120:123]                                 140          1          -    Covered              
+        bin auto[124:127]                                 139          1          -    Covered              
+        bin auto[128:131]                                 161          1          -    Covered              
+        bin auto[132:135]                                 159          1          -    Covered              
+        bin auto[136:139]                                 185          1          -    Covered              
+        bin auto[140:143]                                 170          1          -    Covered              
+        bin auto[144:147]                                 145          1          -    Covered              
+        bin auto[148:151]                                 161          1          -    Covered              
+        bin auto[152:155]                                 164          1          -    Covered              
+        bin auto[156:159]                                 148          1          -    Covered              
+        bin auto[160:163]                                 126          1          -    Covered              
+        bin auto[164:167]                                 139          1          -    Covered              
+        bin auto[168:171]                                 167          1          -    Covered              
+        bin auto[172:175]                                 174          1          -    Covered              
+        bin auto[176:179]                                 159          1          -    Covered              
+        bin auto[180:183]                                 163          1          -    Covered              
+        bin auto[184:187]                                 143          1          -    Covered              
+        bin auto[188:191]                                 169          1          -    Covered              
+        bin auto[192:195]                                 153          1          -    Covered              
+        bin auto[196:199]                                 154          1          -    Covered              
+        bin auto[200:203]                                 162          1          -    Covered              
+        bin auto[204:207]                                 154          1          -    Covered              
+        bin auto[208:211]                                 149          1          -    Covered              
+        bin auto[212:215]                                 154          1          -    Covered              
+        bin auto[216:219]                                 146          1          -    Covered              
+        bin auto[220:223]                                 146          1          -    Covered              
+        bin auto[224:227]                                 144          1          -    Covered              
+        bin auto[228:231]                                 172          1          -    Covered              
+        bin auto[232:235]                                 159          1          -    Covered              
+        bin auto[236:239]                                 161          1          -    Covered              
+        bin auto[240:243]                                 154          1          -    Covered              
+        bin auto[244:247]                                 162          1          -    Covered              
+        bin auto[248:251]                                 154          1          -    Covered              
+        bin auto[252:255]                                 144          1          -    Covered              
+    Cross en_x_data                                   100.00%        100          -    Covered              
+        covered/total bins:                               128        128          -                      
+        missing/total bins:                                 0        128          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[252:255]>                    75          1          -    Covered              
+            bin <auto[0],auto[252:255]>                    69          1          -    Covered              
+            bin <auto[1],auto[248:251]>                    87          1          -    Covered              
+            bin <auto[0],auto[248:251]>                    67          1          -    Covered              
+            bin <auto[1],auto[244:247]>                    74          1          -    Covered              
+            bin <auto[0],auto[244:247]>                    88          1          -    Covered              
+            bin <auto[1],auto[240:243]>                    82          1          -    Covered              
+            bin <auto[0],auto[240:243]>                    72          1          -    Covered              
+            bin <auto[1],auto[236:239]>                    77          1          -    Covered              
+            bin <auto[0],auto[236:239]>                    84          1          -    Covered              
+            bin <auto[1],auto[232:235]>                    82          1          -    Covered              
+            bin <auto[0],auto[232:235]>                    77          1          -    Covered              
+            bin <auto[1],auto[228:231]>                   101          1          -    Covered              
+            bin <auto[0],auto[228:231]>                    71          1          -    Covered              
+            bin <auto[1],auto[224:227]>                    79          1          -    Covered              
+            bin <auto[0],auto[224:227]>                    65          1          -    Covered              
+            bin <auto[1],auto[220:223]>                    84          1          -    Covered              
+            bin <auto[0],auto[220:223]>                    62          1          -    Covered              
+            bin <auto[1],auto[216:219]>                    76          1          -    Covered              
+            bin <auto[0],auto[216:219]>                    70          1          -    Covered              
+            bin <auto[1],auto[212:215]>                    79          1          -    Covered              
+            bin <auto[0],auto[212:215]>                    75          1          -    Covered              
+            bin <auto[1],auto[208:211]>                    75          1          -    Covered              
+            bin <auto[0],auto[208:211]>                    74          1          -    Covered              
+            bin <auto[1],auto[204:207]>                    83          1          -    Covered              
+            bin <auto[0],auto[204:207]>                    71          1          -    Covered              
+            bin <auto[1],auto[200:203]>                    76          1          -    Covered              
+            bin <auto[0],auto[200:203]>                    86          1          -    Covered              
+            bin <auto[1],auto[196:199]>                    74          1          -    Covered              
+            bin <auto[0],auto[196:199]>                    80          1          -    Covered              
+            bin <auto[1],auto[192:195]>                    81          1          -    Covered              
+            bin <auto[0],auto[192:195]>                    72          1          -    Covered              
+            bin <auto[1],auto[188:191]>                    82          1          -    Covered              
+            bin <auto[0],auto[188:191]>                    87          1          -    Covered              
+            bin <auto[1],auto[184:187]>                    72          1          -    Covered              
+            bin <auto[0],auto[184:187]>                    71          1          -    Covered              
+            bin <auto[1],auto[180:183]>                    85          1          -    Covered              
+            bin <auto[0],auto[180:183]>                    78          1          -    Covered              
+            bin <auto[1],auto[176:179]>                    79          1          -    Covered              
+            bin <auto[0],auto[176:179]>                    80          1          -    Covered              
+            bin <auto[1],auto[172:175]>                    84          1          -    Covered              
+            bin <auto[0],auto[172:175]>                    90          1          -    Covered              
+            bin <auto[1],auto[168:171]>                    96          1          -    Covered              
+            bin <auto[0],auto[168:171]>                    71          1          -    Covered              
+            bin <auto[1],auto[164:167]>                    66          1          -    Covered              
+            bin <auto[0],auto[164:167]>                    73          1          -    Covered              
+            bin <auto[1],auto[160:163]>                    76          1          -    Covered              
+            bin <auto[0],auto[160:163]>                    50          1          -    Covered              
+            bin <auto[1],auto[156:159]>                    72          1          -    Covered              
+            bin <auto[0],auto[156:159]>                    76          1          -    Covered              
+            bin <auto[1],auto[152:155]>                    84          1          -    Covered              
+            bin <auto[0],auto[152:155]>                    80          1          -    Covered              
+            bin <auto[1],auto[148:151]>                    86          1          -    Covered              
+            bin <auto[0],auto[148:151]>                    75          1          -    Covered              
+            bin <auto[1],auto[144:147]>                    75          1          -    Covered              
+            bin <auto[0],auto[144:147]>                    70          1          -    Covered              
+            bin <auto[1],auto[140:143]>                    80          1          -    Covered              
+            bin <auto[0],auto[140:143]>                    90          1          -    Covered              
+            bin <auto[1],auto[136:139]>                    94          1          -    Covered              
+            bin <auto[0],auto[136:139]>                    91          1          -    Covered              
+            bin <auto[1],auto[132:135]>                    76          1          -    Covered              
+            bin <auto[0],auto[132:135]>                    83          1          -    Covered              
+            bin <auto[1],auto[128:131]>                    80          1          -    Covered              
+            bin <auto[0],auto[128:131]>                    81          1          -    Covered              
+            bin <auto[1],auto[124:127]>                    57          1          -    Covered              
+            bin <auto[0],auto[124:127]>                    82          1          -    Covered              
+            bin <auto[1],auto[120:123]>                    63          1          -    Covered              
+            bin <auto[0],auto[120:123]>                    77          1          -    Covered              
+            bin <auto[1],auto[116:119]>                    67          1          -    Covered              
+            bin <auto[0],auto[116:119]>                    80          1          -    Covered              
+            bin <auto[1],auto[112:115]>                    76          1          -    Covered              
+            bin <auto[0],auto[112:115]>                    75          1          -    Covered              
+            bin <auto[1],auto[108:111]>                    79          1          -    Covered              
+            bin <auto[0],auto[108:111]>                    78          1          -    Covered              
+            bin <auto[1],auto[104:107]>                    97          1          -    Covered              
+            bin <auto[0],auto[104:107]>                    78          1          -    Covered              
+            bin <auto[1],auto[100:103]>                    78          1          -    Covered              
+            bin <auto[0],auto[100:103]>                    71          1          -    Covered              
+            bin <auto[1],auto[96:99]>                      82          1          -    Covered              
+            bin <auto[0],auto[96:99]>                      77          1          -    Covered              
+            bin <auto[1],auto[92:95]>                      83          1          -    Covered              
+            bin <auto[0],auto[92:95]>                      81          1          -    Covered              
+            bin <auto[1],auto[88:91]>                      81          1          -    Covered              
+            bin <auto[0],auto[88:91]>                      79          1          -    Covered              
+            bin <auto[1],auto[84:87]>                      78          1          -    Covered              
+            bin <auto[0],auto[84:87]>                      76          1          -    Covered              
+            bin <auto[1],auto[80:83]>                      78          1          -    Covered              
+            bin <auto[0],auto[80:83]>                      80          1          -    Covered              
+            bin <auto[1],auto[76:79]>                      85          1          -    Covered              
+            bin <auto[0],auto[76:79]>                      84          1          -    Covered              
+            bin <auto[1],auto[72:75]>                      81          1          -    Covered              
+            bin <auto[0],auto[72:75]>                      77          1          -    Covered              
+            bin <auto[1],auto[68:71]>                      93          1          -    Covered              
+            bin <auto[0],auto[68:71]>                      76          1          -    Covered              
+            bin <auto[1],auto[64:67]>                      80          1          -    Covered              
+            bin <auto[0],auto[64:67]>                      58          1          -    Covered              
+            bin <auto[1],auto[60:63]>                      86          1          -    Covered              
+            bin <auto[0],auto[60:63]>                      66          1          -    Covered              
+            bin <auto[1],auto[56:59]>                      81          1          -    Covered              
+            bin <auto[0],auto[56:59]>                      80          1          -    Covered              
+            bin <auto[1],auto[52:55]>                      92          1          -    Covered              
+            bin <auto[0],auto[52:55]>                      83          1          -    Covered              
+            bin <auto[1],auto[48:51]>                      79          1          -    Covered              
+            bin <auto[0],auto[48:51]>                      77          1          -    Covered              
+            bin <auto[1],auto[44:47]>                      81          1          -    Covered              
+            bin <auto[0],auto[44:47]>                      74          1          -    Covered              
+            bin <auto[1],auto[40:43]>                      74          1          -    Covered              
+            bin <auto[0],auto[40:43]>                      91          1          -    Covered              
+            bin <auto[1],auto[36:39]>                      75          1          -    Covered              
+            bin <auto[0],auto[36:39]>                      80          1          -    Covered              
+            bin <auto[1],auto[32:35]>                      77          1          -    Covered              
+            bin <auto[0],auto[32:35]>                      77          1          -    Covered              
+            bin <auto[1],auto[28:31]>                      67          1          -    Covered              
+            bin <auto[0],auto[28:31]>                      76          1          -    Covered              
+            bin <auto[1],auto[24:27]>                      66          1          -    Covered              
+            bin <auto[0],auto[24:27]>                      92          1          -    Covered              
+            bin <auto[1],auto[20:23]>                      79          1          -    Covered              
+            bin <auto[0],auto[20:23]>                      64          1          -    Covered              
+            bin <auto[1],auto[16:19]>                      82          1          -    Covered              
+            bin <auto[0],auto[16:19]>                      71          1          -    Covered              
+            bin <auto[1],auto[12:15]>                      75          1          -    Covered              
+            bin <auto[0],auto[12:15]>                      74          1          -    Covered              
+            bin <auto[1],auto[8:11]>                       80          1          -    Covered              
+            bin <auto[0],auto[8:11]>                       86          1          -    Covered              
+            bin <auto[1],auto[4:7]>                        97          1          -    Covered              
+            bin <auto[0],auto[4:7]>                        73          1          -    Covered              
+            bin <auto[1],auto[0:3]>                        68          1          -    Covered              
+            bin <auto[0],auto[0:3]>                        91          1          -    Covered              
+    Cross rst_x_en                                    100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <auto[1],auto[1]>                        5007          1          -    Covered              
+            bin <auto[0],auto[1]>                          82          1          -    Covered              
+            bin <auto[1],auto[0]>                        4815          1          -    Covered              
+            bin <auto[0],auto[0]>                          98          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+Total Coverage By Instance (filtered view): 83.81%
+
