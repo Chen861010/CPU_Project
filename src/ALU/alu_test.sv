@@ -1,19 +1,39 @@
+//==============================================================
+//  ALU Testbench with Directed Tests, Random Tests,
+//  and Functional Coverage
+//
+//  Features:
+//   • Directed vector testing (original provided patterns)
+//   • Randomized stimulus using a constrained class
+//   • Functional coverage: opcode, zero flag, output ranges
+//   • Unified clock generation and DUT instantiation
+//
+//  This testbench is intended for simulation (Questa / Xcelium)
+//==============================================================
+
 import typedefs::*;
 
 module alu_test;
 timeunit 1ns;
 timeprecision 100ps;
 
+// ------------------------------------------------------------
+// Signals for DUT inputs and outputs
+// ------------------------------------------------------------
 logic  [7:0] accum, data, out;
-logic  zero;
-opcode_t opcode = HLT;
+logic        zero;
+opcode_t     opcode = HLT;      // Start with a legal opcode
 
-// Clock
+// ------------------------------------------------------------
+// Clock generation
+// ------------------------------------------------------------
 `define PERIOD 10
 logic clk = 1'b1;
 always #(`PERIOD/2) clk = ~clk;
 
-// DUT
+// ------------------------------------------------------------
+// Instantiate DUT
+// ------------------------------------------------------------
 alu alu1 (
     .out(out),
     .zero(zero),
@@ -23,11 +43,13 @@ alu alu1 (
     .opcode(opcode)
 );
 
-// ------------------------------------------------------------
-// =============== NEW : Coverage Groups ======================
-// ------------------------------------------------------------
+//==============================================================
+//  Functional Coverage
+//==============================================================
 
-// 1. opcode coverage
+// ------------------------------------------------------------
+// 1. Opcode coverage — ensure all ALU operations are exercised
+// ------------------------------------------------------------
 covergroup cg_opcode @(posedge clk);
     cp_opcode : coverpoint opcode {
         bins HLT = {HLT};
@@ -41,12 +63,19 @@ covergroup cg_opcode @(posedge clk);
     }
 endgroup
 
-// 2. zero flag coverage
+// ------------------------------------------------------------
+// 2. Zero-flag coverage — detect transitions 0 → 1 and 1 → 0
+// ------------------------------------------------------------
 covergroup cg_zero @(posedge clk);
-    cp_zero : coverpoint zero { bins z0 = {0}; bins z1 = {1}; }
+    cp_zero : coverpoint zero {
+        bins z0 = {0};
+        bins z1 = {1};
+    }
 endgroup
 
-// 3. output value spread coverage
+// ------------------------------------------------------------
+// 3. Output-value distribution — low/mid/high ranges
+// ------------------------------------------------------------
 covergroup cg_out @(posedge clk);
     cp_out : coverpoint out {
         bins low    = { [0:15] };
@@ -55,34 +84,44 @@ covergroup cg_out @(posedge clk);
     }
 endgroup
 
+// Instantiate covergroups
 cg_opcode   cov_opcode  = new();
 cg_zero     cov_zero    = new();
 cg_out      cov_out     = new();
 
-// ------------------------------------------------------------
-// =============== NEW : Random Test Class ====================
-// ------------------------------------------------------------
+//==============================================================
+//  Random Test Class
+//==============================================================
+
+// This class can generate randomized ALU inputs.
+// Only opcodes inside the legal enum are allowed.
 class RandALU;
     rand logic [7:0] accum, data;
     rand opcode_t   opcode;
 
-    // 避免無意義的 case，例如 SKZ/HLT 無運算 → 不限制但可加入更多 constraints
-    constraint legal_opcode { opcode inside {HLT,SKZ,ADD,AND,XOR,LDA,STO,JMP}; }
-
+    constraint legal_opcode {
+        opcode inside {HLT, SKZ, ADD, AND, XOR, LDA, STO, JMP};
+    }
 endclass
 
 RandALU rv = new();
 
-// ------------------------------------------------------------
-// =============== Checker Task (原本的) ========================
-// ------------------------------------------------------------
+//==============================================================
+//  Checker Task for Directed Tests
+//==============================================================
+//
+// Expects = 9-bit: {zero, out[7:0]}
+// The directed tests compare the DUT result with a known value.
+// Random tests do not use checkit() because expected values
+// are not precomputed in this TB.
+//
 task checkit (input [8:0] expects);
 begin
     $display("%t opcode=%s data=%h accum=%h | zero=%b out=%h",
                 $time, opcode.name(), data, accum, zero, out);
-    if ({zero, out} !== expects)
-    begin
-        $display("zero:%b out:%b expected:%b_%b",
+
+    if ({zero, out} !== expects) begin
+        $display("zero:%b out:%h expected:%b_%h",
                     zero, out, expects[8], expects[7:0]);
         $display("ALU TEST FAILED");
         $stop;
@@ -90,9 +129,13 @@ begin
 end
 endtask
 
-// ------------------------------------------------------------
-// =============== Directed Tests (原本保留) =====================
-// ------------------------------------------------------------
+//==============================================================
+//  Directed Tests
+//==============================================================
+//
+// These patterns correspond to known-good ALU operations.
+// They validate the deterministic behavior of all instructions.
+//
 task run_directed;
 begin
     @(posedge clk)
@@ -104,6 +147,7 @@ begin
     { opcode, data, accum } = 19'h5_37_DA; @(posedge clk) checkit('h0_37);
     { opcode, data, accum } = 19'h6_37_DA; @(posedge clk) checkit('h0_da);
     { opcode, data, accum } = 19'h7_37_00; @(posedge clk) checkit('h1_00);
+
     { opcode, data, accum } = 19'h2_07_12; @(posedge clk) checkit('h0_19);
     { opcode, data, accum } = 19'h3_1F_35; @(posedge clk) checkit('h0_15);
     { opcode, data, accum } = 19'h4_1E_1D; @(posedge clk) checkit('h0_03);
@@ -114,10 +158,14 @@ begin
 end
 endtask
 
-// ------------------------------------------------------------
-// =============== NEW : Random Test ===========================
-// ------------------------------------------------------------
-// 可修改測試次數：num_tests
+//==============================================================
+//  Random Test
+//==============================================================
+//
+// Generates random opcode/data/accum combinations.
+// No checking is done here because the expected value is not
+// computed in this testbench, but coverage will record all cases.
+//
 task run_random(input int num_tests);
 begin
     $display("----- RANDOM TEST START -----");
@@ -131,8 +179,6 @@ begin
 
         @(posedge clk);
 
-        // 不做 checkit → 因為沒有 expected 值
-        // 但會收 coverage
         $display("%t [RANDOM] opcode=%s accum=%h data=%h out=%h zero=%b",
                     $time, opcode.name(), accum, data, out, zero);
     end
@@ -141,20 +187,19 @@ begin
 end
 endtask
 
-
-// ------------------------------------------------------------
-// =============== Main Test Flow =============================
-// ------------------------------------------------------------
+//==============================================================
+//  Main Test Sequence
+//==============================================================
 initial begin
     $timeformat(-9, 1, " ns", 9);
 
-    // 1. Directed tests first
+    // Step 1: Directed tests
     run_directed();
 
-    // 2. Random test (修改次數)
-    run_random(300);   // 你想 1000 也可以 run_random(1000)
+    // Step 2: Randomized tests — adjustable test count
+    run_random(300);
 
-    // 結束印出覆蓋率（questa/cadence 都支援）
+    // Finish
     $display("===== TEST COMPLETED (NO TIMEOUT) =====");
     $stop;
 end
