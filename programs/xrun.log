@@ -1,0 +1,16 @@
+xrun(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s003: Started on Dec 07, 2025 at 10:55:34 PST
+xrun
+	typedefs.sv
+	cpu_tb.sv
+	cpu.sv
+	Mem.sv
+	ALU.sv
+	8S_control.sv
+	8bit_rig.sv
+	5bit_count.sv
+	2to1_mux.sv
+	-access +rwc
+	-gui
+xrun: *E,FILEMIS: Cannot find the provided file cpu_tb.sv.
+TOOL:	xrun(64)	22.03-s003: Exiting on Dec 07, 2025 at 10:55:35 PST  (total: 00:00:01)
