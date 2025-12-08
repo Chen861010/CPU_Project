@@ -4,7 +4,7 @@ bind control control_assertions CTRL_ASSERT (
     .clk     (clk),
     .rst_    (rst_),
     .opcode  (opcode),
-    .ps      (state),     // DUT internal state output name EXACT
+    .ps      (state),    
     .zero    (zero),
 
     .load_ac (load_ac),
