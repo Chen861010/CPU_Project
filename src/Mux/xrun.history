@@ -1,0 +1,2 @@
+s1(07Dec2025:12:19:26):  xrun 2to1_mux.sv scale_mux_test.sv -access +rwc -gui 
+s2(07Dec2025:12:20:09):  xrun 2to1_mux.sv scale_mux_test.sv -access +rwc -gui 
