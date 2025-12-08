@@ -1,0 +1,1092 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /testbench/dut/ASSERT_INST
+=== Design Unit: work.cpu_assertions
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       9         8         1    88.88%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/testbench/dut/ASSERT_INST/assert__8
+                     cpu_assertions.sv(100)             0          1
+/testbench/dut/ASSERT_INST/assert__7
+                     cpu_assertions.sv(91)              0          1
+/testbench/dut/ASSERT_INST/assert__6
+                     cpu_assertions.sv(81)              0          1
+/testbench/dut/ASSERT_INST/assert__5
+                     cpu_assertions.sv(71)              0          1
+/testbench/dut/ASSERT_INST/assert__4
+                     cpu_assertions.sv(61)              0          1
+/testbench/dut/ASSERT_INST/assert__3
+                     cpu_assertions.sv(52)              0          0
+/testbench/dut/ASSERT_INST/assert__2
+                     cpu_assertions.sv(42)              0          1
+/testbench/dut/ASSERT_INST/assert__1
+                     cpu_assertions.sv(32)              0          1
+/testbench/dut/ASSERT_INST/assert__0
+                     cpu_assertions.sv(22)              0          1
+
+=================================================================================
+=== Instance: /testbench
+=== Design Unit: work.testbench
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        17        13         4    76.47%
+
+================================Branch Details================================
+
+Branch Coverage for instance /testbench
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File cpu_stb.sv
+------------------------------------IF Branch------------------------------------
+    47                                     34560     Count coming in to IF
+    47              1                       6048     
+    48              1                      28512     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    331                                    25000     Count coming in to CASE
+    332             1                       3220     
+    333             1                       3148     
+    334             1                       3146     
+    335             1                       3133     
+    336             1                       3010     
+    337             1                       3043     
+    338             1                       3205     
+    339             1                       3095     
+                                         ***0***     All False Count
+Branch totals: 8 hits of 9 branches = 88.88%
+
+------------------------------------IF Branch------------------------------------
+    367                                        1     Count coming in to IF
+    367             1                          1     
+    367             2                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    377                                        1     Count coming in to IF
+    377             1                          1     
+    377             2                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    387                                        1     Count coming in to IF
+    387             1                          1     
+    387             2                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         2         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /testbench --
+
+  File cpu_stb.sv
+----------------Focused Condition View-------------------
+Line       117 Item    1  (~halt && (cycles < max_cycles))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+
+
+Directive Coverage:
+    Directives                       3         3         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/testbench/#ublk#178839128#354/#ublk#178839128#364/i_cover__368 
+                                         testbench Verilog  SVA  cpu_stb.sv(368)    1 Covered   
+/testbench/#ublk#178839128#354/#ublk#178839128#374/i_cover__378 
+                                         testbench Verilog  SVA  cpu_stb.sv(378)    1 Covered   
+/testbench/#ublk#178839128#354/#ublk#178839128#384/i_cover__388 
+                                         testbench Verilog  SVA  cpu_stb.sv(388)    1 Covered   
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      3         0         3     0.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /testbench --
+
+  File cpu_stb.sv
+----------------Focused Expression View-----------------
+Line       366 Item    1  (pc == 23)
+Expression totals: 0 of 1 input term covered = 0.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  (pc == 23)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (pc == 23)_0          -                             
+  Row   2:          1  (pc == 23)_1          -                             
+
+----------------Focused Expression View-----------------
+Line       376 Item    1  (pc == 16)
+Expression totals: 0 of 1 input term covered = 0.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  (pc == 16)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (pc == 16)_0          -                             
+  Row   2:          1  (pc == 16)_1          -                             
+
+----------------Focused Expression View-----------------
+Line       386 Item    1  (pc == 12)
+Expression totals: 0 of 1 input term covered = 0.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  (pc == 12)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (pc == 12)_0          -                             
+  Row   2:          1  (pc == 12)_1          -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     224       224         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /testbench --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File cpu_stb.sv
+    44              1                      67105     
+    44              2                      67104     
+    46              1                      34560     
+    47              1                       6048     
+    48              1                      28512     
+    54              1                      29521     
+    72              1                          1     
+    73              1                          1     
+    74              1                          1     
+    75              1                          1     
+    76              1                          1     
+    77              1                          1     
+    78              1                          1     
+    79              1                          1     
+    83              1                          1     
+    84              1                          1     
+    85              1                          1     
+    86              1                          1     
+    87              1                          1     
+    88              1                          1     
+    89              1                          1     
+    90              1                          1     
+    98              1                       1008     
+    99              1                       5040     
+    99              2                       5040     
+    100             1                       1008     
+    101             1                       5040     
+    101             2                       5040     
+    108             1                      58362     
+    116             1                       1008     
+    117             1                       7632     
+    118             1                       6624     
+    119             1                       6624     
+    121             1                       1008     
+    129             1                          1     
+    129             2                         32     
+    129             3                         32     
+    131             1                          1     
+    132             1                          1     
+    133             1                          1     
+    134             1                          1     
+    135             1                          1     
+    136             1                          1     
+    137             1                          1     
+    138             1                          1     
+    139             1                          1     
+    140             1                          1     
+    141             1                          1     
+    142             1                          1     
+    143             1                          1     
+    144             1                          1     
+    145             1                          1     
+    146             1                          1     
+    147             1                          1     
+    148             1                          1     
+    149             1                          1     
+    150             1                          1     
+    151             1                          1     
+    152             1                          1     
+    153             1                          1     
+    154             1                          1     
+    155             1                          1     
+    157             1                          1     
+    158             1                          1     
+    159             1                          1     
+    160             1                          1     
+    161             1                          1     
+    169             1                          1     
+    169             2                         32     
+    169             3                         32     
+    171             1                          1     
+    172             1                          1     
+    173             1                          1     
+    174             1                          1     
+    175             1                          1     
+    176             1                          1     
+    177             1                          1     
+    178             1                          1     
+    179             1                          1     
+    180             1                          1     
+    181             1                          1     
+    182             1                          1     
+    183             1                          1     
+    184             1                          1     
+    185             1                          1     
+    186             1                          1     
+    187             1                          1     
+    188             1                          1     
+    190             1                          1     
+    191             1                          1     
+    192             1                          1     
+    193             1                          1     
+    201             1                          1     
+    201             2                         32     
+    201             3                         32     
+    203             1                          1     
+    204             1                          1     
+    205             1                          1     
+    206             1                          1     
+    207             1                          1     
+    208             1                          1     
+    209             1                          1     
+    210             1                          1     
+    211             1                          1     
+    212             1                          1     
+    213             1                          1     
+    214             1                          1     
+    215             1                          1     
+    216             1                          1     
+    217             1                          1     
+    218             1                          1     
+    220             1                          1     
+    221             1                          1     
+    222             1                          1     
+    223             1                          1     
+    224             1                          1     
+    225             1                          1     
+    234             1                          1     
+    234             2                         32     
+    235             1                         32     
+    238             1                          1     
+    241             1                          1     
+    244             1                          1     
+    247             1                          1     
+    248             1                          1     
+    257             1                          1     
+    257             2                         32     
+    257             3                         32     
+    259             1                          1     
+    260             1                          1     
+    261             1                          1     
+    262             1                          1     
+    263             1                          1     
+    264             1                          1     
+    266             1                          1     
+    267             1                          1     
+    275             1                          1     
+    275             2                         32     
+    275             3                         32     
+    277             1                          1     
+    278             1                          1     
+    279             1                          1     
+    281             1                          1     
+    282             1                          1     
+    283             1                          1     
+    285             1                          1     
+    287             1                          1     
+    288             1                          1     
+    289             1                          1     
+    297             1                          1     
+    297             2                         32     
+    297             3                         32     
+    299             1                          1     
+    300             1                          1     
+    301             1                          1     
+    303             1                          1     
+    304             1                          1     
+    312             1                          1     
+    312             2                         32     
+    312             3                         32     
+    314             1                          1     
+    315             1                          1     
+    316             1                          1     
+    318             1                          1     
+    326             1                       1000     
+    326             2                      32000     
+    326             3                      32000     
+    328             1                       1000     
+    328             2                      25000     
+    330             1                      25000     
+    332             1                       3220     
+    333             1                       3148     
+    334             1                       3146     
+    335             1                       3133     
+    336             1                       3010     
+    337             1                       3043     
+    338             1                       3205     
+    339             1                       3095     
+    341             1                      25000     
+    344             1                       1000     
+    346             1                       1000     
+    346             2                       6000     
+    347             1                       6000     
+    358             1                          1     
+    359             1                          1     
+    365             1                          1     
+    365             2                          1     
+    365             3                          1     
+    366             1                          1     
+    367             1                          1     
+    375             1                          1     
+    375             2                          1     
+    375             3                          1     
+    376             1                          1     
+    377             1                          1     
+    385             1                          1     
+    385             2                          1     
+    385             3                          1     
+    386             1                          1     
+    387             1                          1     
+    395             1                          1     
+    395             2                          1     
+    395             3                          1     
+    396             1                          1     
+    401             1                          1     
+    401             2                          1     
+    401             3                          1     
+    404             1                          1     
+    404             2                          1     
+    404             3                          1     
+    407             1                          1     
+    407             2                          1     
+    407             3                          1     
+    410             1                          1     
+    410             2                          1     
+    410             3                          1     
+    417             1                          1     
+    420             1                          1     
+    420             2                       1000     
+    421             1                       1000     
+    422             1                       1000     
+    423             1                       1000     
+    426             1                          1     
+    429             1                          1     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         24        24         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /testbench --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+
+Total Node Count     =         12 
+Toggled Node Count   =         12 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (24 of 24 bins)
+
+=================================================================================
+=== Instance: /cpu_stb_sv_unit
+=== Design Unit: work.cpu_stb_sv_unit
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      8        na        na   100.00%
+        Coverpoints/Crosses         18        na        na        na
+            Covergroup Bins         67        67         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cpu_stb_sv_unit/cg_opcode                      100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_opcode           100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin HLT                                          3022          1          -    Covered              
+        bin SKZ                                           659          1          -    Covered              
+        bin ADD                                            64          1          -    Covered              
+        bin AND                                             4          1          -    Covered              
+        bin XOR                                           640          1          -    Covered              
+        bin LDA                                          1379          1          -    Covered              
+        bin STO                                           836          1          -    Covered              
+        bin JMP                                          1028          1          -    Covered              
+ TYPE /cpu_stb_sv_unit/cg_control                     100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_load_ir                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_inc_pc                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_mem_rd                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_control          100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_load_ir                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      5473          1          -    Covered              
+        bin auto[1]                                      2159          1          -    Covered              
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      7375          1          -    Covered              
+        bin auto[1]                                       257          1          -    Covered              
+    Coverpoint cp_inc_pc                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      5395          1          -    Covered              
+        bin auto[1]                                      2237          1          -    Covered              
+    Coverpoint cp_mem_rd                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      4951          1          -    Covered              
+        bin auto[1]                                      2681          1          -    Covered              
+ TYPE /cpu_stb_sv_unit/cg_memwr                       100.00%        100          -    Covered              
+    covered/total bins:                                     2          2          -                      
+    missing/total bins:                                     0          2          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_mem_wr                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_mem_wr           100.00%        100          -    Covered              
+    covered/total bins:                                     2          2          -                      
+    missing/total bins:                                     0          2          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_mem_wr                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin on                                            209          1          -    Covered              
+        bin off                                         15055          1          -    Covered              
+ TYPE /cpu_stb_sv_unit/cg_pc                          100.00%        100          -    Covered              
+    covered/total bins:                                     4          4          -                      
+    missing/total bins:                                     0          4          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_pc                                  100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_pc               100.00%        100          -    Covered              
+    covered/total bins:                                     4          4          -                      
+    missing/total bins:                                     0          4          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_pc                                  100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin reset_pc                                     3237          1          -    Covered              
+        bin test1_hlt                                       3          1          -    Covered              
+        bin test2_hlt                                       6          1          -    Covered              
+        bin test3_hlt                                      23          1          -    Covered              
+        default bin others[1]                             304                     -    Occurred             
+        default bin others[2]                             297                     -    Occurred             
+        default bin others[3]                             839                     -    Occurred             
+        default bin others[4]                            1011                     -    Occurred             
+        default bin others[5]                            1004                     -    Occurred             
+        default bin others[6]                             296                     -    Occurred             
+        default bin others[7]                             273                     -    Occurred             
+        default bin others[8]                             128                     -    Occurred             
+        default bin others[9]                              56                     -    Occurred             
+        default bin others[10]                             59                     -    Occurred             
+        default bin others[11]                             57                     -    Occurred             
+        default bin others[13]                              8                     -    Occurred             
+        default bin others[14]                              8                     -    Occurred             
+        default bin others[15]                              2                     -    Occurred             
+        default bin others[17]                              4                     -    Occurred             
+        default bin others[18]                              4                     -    Occurred             
+        default bin others[19]                              1                     -    Occurred             
+        default bin others[20]                              3                     -    Occurred             
+        default bin others[21]                              4                     -    Occurred             
+        default bin others[22]                              1                     -    Occurred             
+        default bin others[30]                              3                     -    Occurred             
+        default bin others[31]                              1                     -    Occurred             
+ TYPE /cpu_stb_sv_unit/cg_opcode_ctrl                 100.00%        100          -    Covered              
+    covered/total bins:                                    25         25          -                      
+    missing/total bins:                                     0         25          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_load_ac                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_ctrl_cross                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_opcode_ctrl      100.00%        100          -    Covered              
+    covered/total bins:                                    25         25          -                      
+    missing/total bins:                                     0         25          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin HLT                                          3022          1          -    Covered              
+        bin SKZ                                           659          1          -    Covered              
+        bin ADD                                            64          1          -    Covered              
+        bin AND                                             4          1          -    Covered              
+        bin XOR                                           640          1          -    Covered              
+        bin LDA                                          1379          1          -    Covered              
+        bin STO                                           836          1          -    Covered              
+        bin JMP                                          1028          1          -    Covered              
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin off                                          7375          1          -    Covered              
+        bin on                                            257          1          -    Covered              
+    Coverpoint cp_load_ac                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin off                                          7110          1          -    Covered              
+        bin on                                            522          1          -    Covered              
+    Cross opcode_ctrl_cross                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <LDA,off,on>                              345          1          -    Covered              
+            bin <XOR,off,on>                              160          1          -    Covered              
+            bin <AND,off,on>                                1          1          -    Covered              
+            bin <ADD,off,on>                               16          1          -    Covered              
+            bin <JMP,on,off>                              257          1          -    Covered              
+            bin <JMP,off,off>                             771          1          -    Covered              
+            bin <STO,off,off>                             836          1          -    Covered              
+            bin <LDA,off,off>                            1034          1          -    Covered              
+            bin <XOR,off,off>                             480          1          -    Covered              
+            bin <AND,off,off>                               3          1          -    Covered              
+            bin <SKZ,off,off>                             659          1          -    Covered              
+            bin <ADD,off,off>                              48          1          -    Covered              
+            bin <HLT,off,off>                            3022          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin non_alu_load_ac                      0                     -    ZERO                 
+            ignore_bin non_jmp_load_pc                      0                     -    ZERO                 
+ TYPE /cpu_stb_sv_unit/cg_skz                         100.00%        100          -    Covered              
+    covered/total bins:                                     5          5          -                      
+    missing/total bins:                                     0          5          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_zero                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_zero_cross                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_skz              100.00%        100          -    Covered              
+    covered/total bins:                                     5          5          -                      
+    missing/total bins:                                     0          5          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin SKZ_only                                      659          1          -    Covered              
+    Coverpoint cp_zero                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin z0                                           3368          1          -    Covered              
+        bin z1                                           4264          1          -    Covered              
+    Cross opcode_zero_cross                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <SKZ_only,z1>                             312          1          -    Covered              
+            bin <SKZ_only,z0>                             347          1          -    Covered              
+ TYPE /cpu_stb_sv_unit/cg_pc_action                   100.00%        100          -    Covered              
+    covered/total bins:                                     7          7          -                      
+    missing/total bins:                                     0          7          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_inc                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross pc_action_cross                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_pc_action        100.00%        100          -    Covered              
+    covered/total bins:                                     7          7          -                      
+    missing/total bins:                                     0          7          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_inc                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin off                                          5395          1          -    Covered              
+        bin on                                           2237          1          -    Covered              
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin off                                          7375          1          -    Covered              
+        bin on                                            257          1          -    Covered              
+    Cross pc_action_cross                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <off,on>                                  257          1          -    Covered              
+            bin <on,off>                                 2237          1          -    Covered              
+            bin <off,off>                                5138          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin both_high                            0                     -    ZERO                 
+ TYPE /cpu_stb_sv_unit/cg_state                       100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_state                               100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_state            100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_state                               100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin IDLE                                         2159          1          -    Covered              
+        bin INST_ADDR                                    3169          1          -    Covered              
+        bin INST_FETCH                                   2159          1          -    Covered              
+        bin INST_LOAD                                    2159          1          -    Covered              
+        bin OP_ADDR                                      2159          1          -    Covered              
+        bin OP_FETCH                                     1153          1          -    Covered              
+        bin ALU_OP                                       1153          1          -    Covered              
+        bin STORE                                        1153          1          -    Covered              
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cpu_stb_sv_unit/cg_opcode                      100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_opcode           100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin HLT                                          3022          1          -    Covered              
+        bin SKZ                                           659          1          -    Covered              
+        bin ADD                                            64          1          -    Covered              
+        bin AND                                             4          1          -    Covered              
+        bin XOR                                           640          1          -    Covered              
+        bin LDA                                          1379          1          -    Covered              
+        bin STO                                           836          1          -    Covered              
+        bin JMP                                          1028          1          -    Covered              
+ TYPE /cpu_stb_sv_unit/cg_control                     100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_load_ir                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_inc_pc                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_mem_rd                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_control          100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_load_ir                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      5473          1          -    Covered              
+        bin auto[1]                                      2159          1          -    Covered              
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      7375          1          -    Covered              
+        bin auto[1]                                       257          1          -    Covered              
+    Coverpoint cp_inc_pc                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      5395          1          -    Covered              
+        bin auto[1]                                      2237          1          -    Covered              
+    Coverpoint cp_mem_rd                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                      4951          1          -    Covered              
+        bin auto[1]                                      2681          1          -    Covered              
+ TYPE /cpu_stb_sv_unit/cg_memwr                       100.00%        100          -    Covered              
+    covered/total bins:                                     2          2          -                      
+    missing/total bins:                                     0          2          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_mem_wr                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_mem_wr           100.00%        100          -    Covered              
+    covered/total bins:                                     2          2          -                      
+    missing/total bins:                                     0          2          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_mem_wr                              100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin on                                            209          1          -    Covered              
+        bin off                                         15055          1          -    Covered              
+ TYPE /cpu_stb_sv_unit/cg_pc                          100.00%        100          -    Covered              
+    covered/total bins:                                     4          4          -                      
+    missing/total bins:                                     0          4          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_pc                                  100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_pc               100.00%        100          -    Covered              
+    covered/total bins:                                     4          4          -                      
+    missing/total bins:                                     0          4          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_pc                                  100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin reset_pc                                     3237          1          -    Covered              
+        bin test1_hlt                                       3          1          -    Covered              
+        bin test2_hlt                                       6          1          -    Covered              
+        bin test3_hlt                                      23          1          -    Covered              
+        default bin others[1]                             304                     -    Occurred             
+        default bin others[2]                             297                     -    Occurred             
+        default bin others[3]                             839                     -    Occurred             
+        default bin others[4]                            1011                     -    Occurred             
+        default bin others[5]                            1004                     -    Occurred             
+        default bin others[6]                             296                     -    Occurred             
+        default bin others[7]                             273                     -    Occurred             
+        default bin others[8]                             128                     -    Occurred             
+        default bin others[9]                              56                     -    Occurred             
+        default bin others[10]                             59                     -    Occurred             
+        default bin others[11]                             57                     -    Occurred             
+        default bin others[13]                              8                     -    Occurred             
+        default bin others[14]                              8                     -    Occurred             
+        default bin others[15]                              2                     -    Occurred             
+        default bin others[17]                              4                     -    Occurred             
+        default bin others[18]                              4                     -    Occurred             
+        default bin others[19]                              1                     -    Occurred             
+        default bin others[20]                              3                     -    Occurred             
+        default bin others[21]                              4                     -    Occurred             
+        default bin others[22]                              1                     -    Occurred             
+        default bin others[30]                              3                     -    Occurred             
+        default bin others[31]                              1                     -    Occurred             
+ TYPE /cpu_stb_sv_unit/cg_opcode_ctrl                 100.00%        100          -    Covered              
+    covered/total bins:                                    25         25          -                      
+    missing/total bins:                                     0         25          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_load_ac                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_ctrl_cross                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_opcode_ctrl      100.00%        100          -    Covered              
+    covered/total bins:                                    25         25          -                      
+    missing/total bins:                                     0         25          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin HLT                                          3022          1          -    Covered              
+        bin SKZ                                           659          1          -    Covered              
+        bin ADD                                            64          1          -    Covered              
+        bin AND                                             4          1          -    Covered              
+        bin XOR                                           640          1          -    Covered              
+        bin LDA                                          1379          1          -    Covered              
+        bin STO                                           836          1          -    Covered              
+        bin JMP                                          1028          1          -    Covered              
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin off                                          7375          1          -    Covered              
+        bin on                                            257          1          -    Covered              
+    Coverpoint cp_load_ac                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin off                                          7110          1          -    Covered              
+        bin on                                            522          1          -    Covered              
+    Cross opcode_ctrl_cross                           100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <LDA,off,on>                              345          1          -    Covered              
+            bin <XOR,off,on>                              160          1          -    Covered              
+            bin <AND,off,on>                                1          1          -    Covered              
+            bin <ADD,off,on>                               16          1          -    Covered              
+            bin <JMP,on,off>                              257          1          -    Covered              
+            bin <JMP,off,off>                             771          1          -    Covered              
+            bin <STO,off,off>                             836          1          -    Covered              
+            bin <LDA,off,off>                            1034          1          -    Covered              
+            bin <XOR,off,off>                             480          1          -    Covered              
+            bin <AND,off,off>                               3          1          -    Covered              
+            bin <SKZ,off,off>                             659          1          -    Covered              
+            bin <ADD,off,off>                              48          1          -    Covered              
+            bin <HLT,off,off>                            3022          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin non_alu_load_ac                      0                     -    ZERO                 
+            ignore_bin non_jmp_load_pc                      0                     -    ZERO                 
+ TYPE /cpu_stb_sv_unit/cg_skz                         100.00%        100          -    Covered              
+    covered/total bins:                                     5          5          -                      
+    missing/total bins:                                     0          5          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_zero                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross opcode_zero_cross                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_skz              100.00%        100          -    Covered              
+    covered/total bins:                                     5          5          -                      
+    missing/total bins:                                     0          5          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin SKZ_only                                      659          1          -    Covered              
+    Coverpoint cp_zero                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin z0                                           3368          1          -    Covered              
+        bin z1                                           4264          1          -    Covered              
+    Cross opcode_zero_cross                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <SKZ_only,z1>                             312          1          -    Covered              
+            bin <SKZ_only,z0>                             347          1          -    Covered              
+ TYPE /cpu_stb_sv_unit/cg_pc_action                   100.00%        100          -    Covered              
+    covered/total bins:                                     7          7          -                      
+    missing/total bins:                                     0          7          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_inc                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross pc_action_cross                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_pc_action        100.00%        100          -    Covered              
+    covered/total bins:                                     7          7          -                      
+    missing/total bins:                                     0          7          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_inc                                 100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin off                                          5395          1          -    Covered              
+        bin on                                           2237          1          -    Covered              
+    Coverpoint cp_load_pc                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin off                                          7375          1          -    Covered              
+        bin on                                            257          1          -    Covered              
+    Cross pc_action_cross                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <off,on>                                  257          1          -    Covered              
+            bin <on,off>                                 2237          1          -    Covered              
+            bin <off,off>                                5138          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin both_high                            0                     -    ZERO                 
+ TYPE /cpu_stb_sv_unit/cg_state                       100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_state                               100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench/cov_state            100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_state                               100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin IDLE                                         2159          1          -    Covered              
+        bin INST_ADDR                                    3169          1          -    Covered              
+        bin INST_FETCH                                   2159          1          -    Covered              
+        bin INST_LOAD                                    2159          1          -    Covered              
+        bin OP_ADDR                                      2159          1          -    Covered              
+        bin OP_FETCH                                     1153          1          -    Covered              
+        bin ALU_OP                                       1153          1          -    Covered              
+        bin STORE                                        1153          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 8
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/testbench/#ublk#178839128#354/#ublk#178839128#364/i_cover__368 
+                                         testbench Verilog  SVA  cpu_stb.sv(368)    1 Covered   
+/testbench/#ublk#178839128#354/#ublk#178839128#374/i_cover__378 
+                                         testbench Verilog  SVA  cpu_stb.sv(378)    1 Covered   
+/testbench/#ublk#178839128#354/#ublk#178839128#384/i_cover__388 
+                                         testbench Verilog  SVA  cpu_stb.sv(388)    1 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 3
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/testbench/dut/ASSERT_INST/assert__8
+                     cpu_assertions.sv(100)             0          1
+/testbench/dut/ASSERT_INST/assert__7
+                     cpu_assertions.sv(91)              0          1
+/testbench/dut/ASSERT_INST/assert__6
+                     cpu_assertions.sv(81)              0          1
+/testbench/dut/ASSERT_INST/assert__5
+                     cpu_assertions.sv(71)              0          1
+/testbench/dut/ASSERT_INST/assert__4
+                     cpu_assertions.sv(61)              0          1
+/testbench/dut/ASSERT_INST/assert__3
+                     cpu_assertions.sv(52)              0          0
+/testbench/dut/ASSERT_INST/assert__2
+                     cpu_assertions.sv(42)              0          1
+/testbench/dut/ASSERT_INST/assert__1
+                     cpu_assertions.sv(32)              0          1
+/testbench/dut/ASSERT_INST/assert__0
+                     cpu_assertions.sv(22)              0          1
+
+Total Coverage By Instance (filtered view): 83.16%
+
