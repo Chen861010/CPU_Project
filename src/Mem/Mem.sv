@@ -1,35 +1,60 @@
-// mem.sv
+//==============================================================
+//  mem.sv — 32-word x 8-bit Synchronous Memory
+//
+//  Design matches cpu_v1 and its testbench assumptions:
+//    • Module name: mem
+//    • Internal array: memory[0:31]
+//    • Address width: 5 bits (PC / IR addressing range)
+//    • Separate synchronous read and write operations
+//
+//  Behavior:
+//    • Write occurs on posedge clk when write=1 and read=0
+//    • Read  occurs on posedge clk when read=1 and write=0
+//    • Simultaneous read/write is intentionally disallowed
+//==============================================================
+
 timeunit 1ns;
 timeprecision 100ps;
 
-// 和 cpu_v1 & testbench 對齊：
-//   - 模組名稱： mem
-//   - 內部陣列： memory[0:31]
-//   - 位址寬度： 5 bit (對應 pc_addr / ir_addr)
-
 module mem (
-  input  logic        clk,
-  input  logic        read,
-  input  logic        write,
-  input  logic [4:0]  addr,      // 32 addresses: 0..31
-  input  logic [7:0]  data_in,
-  output logic [7:0]  data_out
+    input  logic        clk,        // Clock input (posedge-triggered)
+    input  logic        read,       // Read enable (active high)
+    input  logic        write,      // Write enable (active high)
+    input  logic [4:0]  addr,       // Address (0–31)
+    input  logic [7:0]  data_in,    // Data for write operation
+    output logic [7:0]  data_out    // Data read from memory
 );
 
-  // 跟 testbench 對齊：dut.u_mem.memory[i]
-  logic [7:0] memory [0:31];
+    // ------------------------------------------------------------
+    // Internal memory array
+    // 32 entries, 8 bits each
+    //
+    // Aligned with testbench access convention:
+    //      dut.u_mem.memory[i]
+    // ------------------------------------------------------------
+    logic [7:0] memory [0:31];
 
-  // Write：在 write=1、read=0 時寫入
-  always_ff @(posedge clk) begin
-    if (write && !read)
-      memory[addr] <= data_in;
-  end
 
-  // Read：在 read=1、write=0 時讀出
-  always_ff @(posedge clk) begin
-    if (read && !write)
-      data_out <= memory[addr];
-  end
+    // ------------------------------------------------------------
+    // Synchronous Write:
+    //   • Occurs only when write=1 and read=0
+    //   • Data is stored at memory[addr]
+    // ------------------------------------------------------------
+    always_ff @(posedge clk) begin
+        if (write && !read)
+            memory[addr] <= data_in;
+    end
+
+
+    // ------------------------------------------------------------
+    // Synchronous Read:
+    //   • Occurs only when read=1 and write=0
+    //   • data_out updates on the rising edge
+    // ------------------------------------------------------------
+    always_ff @(posedge clk) begin
+        if (read && !write)
+            data_out <= memory[addr];
+    end
 
 endmodule
 
