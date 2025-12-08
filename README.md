@@ -76,38 +76,38 @@ README.md                    # Project documentation (this file)
 
 ---
 
-## **Cadence Xcelium + SimVision (`runme.sh`)**
+# Cadence Xcelium + SimVision (`runme.sh`)
 
-`runme.sh` is used for **full CPU simulation and waveform debugging**.  
-This script compiles the entire design and launches SimVision for FSDB waveform viewing.
+`runme.sh` is used for full CPU simulation and waveform debugging using Cadence Xcelium and SimVision.  
+This script compiles the RTL + testbench and launches the waveform viewer.
 
 ### Typical Flow
 
 ```bash
-./runme.sh       # compile + simulate + open SimVision waveform viewer
+./runme.sh      # compile + simulate + open SimVision waveform viewer
 ```
 
 ### Internally, the script performs:
 
 ```bash
 xrun -64bit -access +rwc \
-     cpu_tb.sv cpu.sv ... \
+     cpu_tb.sv cpu.sv *.sv \
      -gui
 ```
 
 ### Features
 
-- Fast compile/runtime  
-- Full SVA/assertion support  
-- SimVision waveform debugging  
-- FSDB signal tracing  
+- Fast compile/runtime for iterative development  
+- FSDB waveform viewing with SimVision  
+- Full SystemVerilog assertion (SVA) support  
+- Suitable for CPU-level waveform debugging  
 
 ### Output Files
 
 - `xrun.log` — simulation log  
 - `xcelium.d/` — build directory  
 - `waves.shm/` or `.fsdb` — waveform database  
-- `simvision_history/` — SimVision layout  
+- `simvision_history/` — GUI state history  
 
 ---
 
