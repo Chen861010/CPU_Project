@@ -1,0 +1,355 @@
+# ** Note: (vsim-220) '/nfs/guille/a2/rh80apps/mentor/questa-2025/questasim/linux_x86_64/../modelsim.ini' is used as the ini file.
+# ** Warning: (vsim-8689) Ignoring plusarg '+acc'.  Did you mean '-voptargs=+acc'?
+# vsim work.alu_test -coverage "+acc" -c -do "cover.do" 
+# Start time: 16:19:40 on Dec 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-220) '/nfs/guille/a2/rh80apps/mentor/questa-2025/questasim/linux_x86_64/../modelsim.ini' is used as the ini file.
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# //  Questa Sim-64
+# //  Version 2025.2_1 linux_x86_64 Jun 26 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.typedefs(fast)
+# Loading work.alu_test_sv_unit(fast)
+# Loading work.alu_test(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.alu(fast)
+# do cover.do
+#   20.0 ns opcode=HLT data=37 accum=da | zero=0 out=da
+#   30.0 ns opcode=SKZ data=37 accum=da | zero=0 out=da
+#   40.0 ns opcode=ADD data=37 accum=da | zero=0 out=11
+#   50.0 ns opcode=AND data=37 accum=da | zero=0 out=12
+#   60.0 ns opcode=XOR data=37 accum=da | zero=0 out=ed
+#   70.0 ns opcode=LDA data=37 accum=da | zero=0 out=37
+#   80.0 ns opcode=STO data=37 accum=da | zero=0 out=da
+#   90.0 ns opcode=JMP data=37 accum=00 | zero=1 out=00
+#  100.0 ns opcode=ADD data=07 accum=12 | zero=0 out=19
+#  110.0 ns opcode=AND data=1f accum=35 | zero=0 out=15
+#  120.0 ns opcode=XOR data=1e accum=1d | zero=0 out=03
+#  130.0 ns opcode=LDA data=72 accum=00 | zero=1 out=72
+#  140.0 ns opcode=STO data=00 accum=10 | zero=0 out=10
+# DIRECTED TEST PASSED
+# ----- RANDOM TEST START -----
+#  150.0 ns [RANDOM] opcode=LDA accum=bc data=25 out=25 zero=0
+#  160.0 ns [RANDOM] opcode=HLT accum=0b data=e9 out=0b zero=0
+#  170.0 ns [RANDOM] opcode=XOR accum=c1 data=1a out=db zero=0
+#  180.0 ns [RANDOM] opcode=ADD accum=ee data=30 out=1e zero=0
+#  190.0 ns [RANDOM] opcode=JMP accum=53 data=8f out=53 zero=0
+#  200.0 ns [RANDOM] opcode=SKZ accum=bd data=91 out=bd zero=0
+#  210.0 ns [RANDOM] opcode=AND accum=70 data=fa out=70 zero=0
+#  220.0 ns [RANDOM] opcode=JMP accum=5c data=d1 out=5c zero=0
+#  230.0 ns [RANDOM] opcode=HLT accum=60 data=d6 out=60 zero=0
+#  240.0 ns [RANDOM] opcode=JMP accum=ed data=de out=ed zero=0
+#  250.0 ns [RANDOM] opcode=AND accum=3d data=29 out=29 zero=0
+#  260.0 ns [RANDOM] opcode=JMP accum=ed data=63 out=ed zero=0
+#  270.0 ns [RANDOM] opcode=ADD accum=15 data=c3 out=d8 zero=0
+#  280.0 ns [RANDOM] opcode=AND accum=85 data=ee out=84 zero=0
+#  290.0 ns [RANDOM] opcode=LDA accum=92 data=98 out=98 zero=0
+#  300.0 ns [RANDOM] opcode=STO accum=57 data=9b out=57 zero=0
+#  310.0 ns [RANDOM] opcode=LDA accum=23 data=4a out=4a zero=0
+#  320.0 ns [RANDOM] opcode=LDA accum=1d data=db out=db zero=0
+#  330.0 ns [RANDOM] opcode=AND accum=2a data=5a out=0a zero=0
+#  340.0 ns [RANDOM] opcode=LDA accum=fc data=af out=af zero=0
+#  350.0 ns [RANDOM] opcode=AND accum=3f data=65 out=25 zero=0
+#  360.0 ns [RANDOM] opcode=HLT accum=5f data=ee out=5f zero=0
+#  370.0 ns [RANDOM] opcode=SKZ accum=80 data=e7 out=80 zero=0
+#  380.0 ns [RANDOM] opcode=AND accum=83 data=78 out=00 zero=0
+#  390.0 ns [RANDOM] opcode=XOR accum=d7 data=15 out=c2 zero=0
+#  400.0 ns [RANDOM] opcode=LDA accum=50 data=80 out=80 zero=0
+#  410.0 ns [RANDOM] opcode=STO accum=9d data=2f out=9d zero=0
+#  420.0 ns [RANDOM] opcode=JMP accum=eb data=1c out=eb zero=0
+#  430.0 ns [RANDOM] opcode=STO accum=00 data=ce out=00 zero=1
+#  440.0 ns [RANDOM] opcode=AND accum=ae data=17 out=06 zero=0
+#  450.0 ns [RANDOM] opcode=XOR accum=7c data=3f out=43 zero=0
+#  460.0 ns [RANDOM] opcode=JMP accum=23 data=e7 out=23 zero=0
+#  470.0 ns [RANDOM] opcode=AND accum=14 data=74 out=14 zero=0
+#  480.0 ns [RANDOM] opcode=SKZ accum=fb data=83 out=fb zero=0
+#  490.0 ns [RANDOM] opcode=JMP accum=95 data=5b out=95 zero=0
+#  500.0 ns [RANDOM] opcode=ADD accum=87 data=e2 out=69 zero=0
+#  510.0 ns [RANDOM] opcode=ADD accum=8a data=78 out=02 zero=0
+#  520.0 ns [RANDOM] opcode=AND accum=82 data=02 out=02 zero=0
+#  530.0 ns [RANDOM] opcode=STO accum=1c data=71 out=1c zero=0
+#  540.0 ns [RANDOM] opcode=ADD accum=8b data=7f out=0a zero=0
+#  550.0 ns [RANDOM] opcode=LDA accum=d1 data=49 out=49 zero=0
+#  560.0 ns [RANDOM] opcode=JMP accum=cc data=93 out=cc zero=0
+#  570.0 ns [RANDOM] opcode=LDA accum=76 data=68 out=68 zero=0
+#  580.0 ns [RANDOM] opcode=JMP accum=6f data=56 out=6f zero=0
+#  590.0 ns [RANDOM] opcode=ADD accum=ee data=35 out=23 zero=0
+#  600.0 ns [RANDOM] opcode=AND accum=47 data=7e out=46 zero=0
+#  610.0 ns [RANDOM] opcode=ADD accum=ae data=01 out=af zero=0
+#  620.0 ns [RANDOM] opcode=XOR accum=9c data=c8 out=54 zero=0
+#  630.0 ns [RANDOM] opcode=XOR accum=1d data=34 out=29 zero=0
+#  640.0 ns [RANDOM] opcode=STO accum=a4 data=64 out=a4 zero=0
+#  650.0 ns [RANDOM] opcode=ADD accum=b0 data=5c out=0c zero=0
+#  660.0 ns [RANDOM] opcode=ADD accum=22 data=3d out=5f zero=0
+#  670.0 ns [RANDOM] opcode=AND accum=0a data=8f out=0a zero=0
+#  680.0 ns [RANDOM] opcode=HLT accum=7a data=b8 out=7a zero=0
+#  690.0 ns [RANDOM] opcode=XOR accum=2d data=d5 out=f8 zero=0
+#  700.0 ns [RANDOM] opcode=AND accum=7d data=d6 out=54 zero=0
+#  710.0 ns [RANDOM] opcode=JMP accum=92 data=c7 out=92 zero=0
+#  720.0 ns [RANDOM] opcode=AND accum=a4 data=d6 out=84 zero=0
+#  730.0 ns [RANDOM] opcode=XOR accum=ff data=3f out=c0 zero=0
+#  740.0 ns [RANDOM] opcode=HLT accum=92 data=a9 out=92 zero=0
+#  750.0 ns [RANDOM] opcode=JMP accum=3f data=a5 out=3f zero=0
+#  760.0 ns [RANDOM] opcode=SKZ accum=c0 data=1b out=c0 zero=0
+#  770.0 ns [RANDOM] opcode=SKZ accum=a1 data=86 out=a1 zero=0
+#  780.0 ns [RANDOM] opcode=JMP accum=94 data=92 out=94 zero=0
+#  790.0 ns [RANDOM] opcode=LDA accum=bf data=1d out=1d zero=0
+#  800.0 ns [RANDOM] opcode=ADD accum=20 data=b6 out=d6 zero=0
+#  810.0 ns [RANDOM] opcode=SKZ accum=66 data=a6 out=66 zero=0
+#  820.0 ns [RANDOM] opcode=LDA accum=b5 data=ad out=ad zero=0
+#  830.0 ns [RANDOM] opcode=JMP accum=3c data=d6 out=3c zero=0
+#  840.0 ns [RANDOM] opcode=STO accum=66 data=f3 out=66 zero=0
+#  850.0 ns [RANDOM] opcode=AND accum=02 data=99 out=00 zero=0
+#  860.0 ns [RANDOM] opcode=SKZ accum=d0 data=df out=d0 zero=0
+#  870.0 ns [RANDOM] opcode=HLT accum=48 data=88 out=48 zero=0
+#  880.0 ns [RANDOM] opcode=SKZ accum=b8 data=b8 out=b8 zero=0
+#  890.0 ns [RANDOM] opcode=HLT accum=4e data=31 out=4e zero=0
+#  900.0 ns [RANDOM] opcode=STO accum=15 data=56 out=15 zero=0
+#  910.0 ns [RANDOM] opcode=JMP accum=94 data=50 out=94 zero=0
+#  920.0 ns [RANDOM] opcode=JMP accum=56 data=96 out=56 zero=0
+#  930.0 ns [RANDOM] opcode=STO accum=29 data=18 out=29 zero=0
+#  940.0 ns [RANDOM] opcode=AND accum=c7 data=7d out=45 zero=0
+#  950.0 ns [RANDOM] opcode=HLT accum=f9 data=eb out=f9 zero=0
+#  960.0 ns [RANDOM] opcode=ADD accum=d4 data=91 out=65 zero=0
+#  970.0 ns [RANDOM] opcode=STO accum=f4 data=45 out=f4 zero=0
+#  980.0 ns [RANDOM] opcode=LDA accum=2a data=cc out=cc zero=0
+#  990.0 ns [RANDOM] opcode=XOR accum=cc data=80 out=4c zero=0
+# 1000.0 ns [RANDOM] opcode=LDA accum=ac data=df out=df zero=0
+# 1010.0 ns [RANDOM] opcode=XOR accum=8d data=76 out=fb zero=0
+# 1020.0 ns [RANDOM] opcode=LDA accum=6f data=1b out=1b zero=0
+# 1030.0 ns [RANDOM] opcode=HLT accum=b6 data=37 out=b6 zero=0
+# 1040.0 ns [RANDOM] opcode=STO accum=f8 data=b7 out=f8 zero=0
+# 1050.0 ns [RANDOM] opcode=XOR accum=0c data=02 out=0e zero=0
+# 1060.0 ns [RANDOM] opcode=JMP accum=82 data=73 out=82 zero=0
+# 1070.0 ns [RANDOM] opcode=LDA accum=c3 data=ca out=ca zero=0
+# 1080.0 ns [RANDOM] opcode=XOR accum=df data=4b out=94 zero=0
+# 1090.0 ns [RANDOM] opcode=AND accum=98 data=4e out=08 zero=0
+# 1100.0 ns [RANDOM] opcode=JMP accum=03 data=9d out=03 zero=0
+# 1110.0 ns [RANDOM] opcode=SKZ accum=51 data=73 out=51 zero=0
+# 1120.0 ns [RANDOM] opcode=SKZ accum=19 data=9e out=19 zero=0
+# 1130.0 ns [RANDOM] opcode=STO accum=20 data=4f out=20 zero=0
+# 1140.0 ns [RANDOM] opcode=AND accum=48 data=36 out=00 zero=0
+# 1150.0 ns [RANDOM] opcode=ADD accum=bb data=d0 out=8b zero=0
+# 1160.0 ns [RANDOM] opcode=JMP accum=5a data=a4 out=5a zero=0
+# 1170.0 ns [RANDOM] opcode=JMP accum=f9 data=b5 out=f9 zero=0
+# 1180.0 ns [RANDOM] opcode=JMP accum=e2 data=e0 out=e2 zero=0
+# 1190.0 ns [RANDOM] opcode=JMP accum=bb data=3c out=bb zero=0
+# 1200.0 ns [RANDOM] opcode=HLT accum=da data=ef out=da zero=0
+# 1210.0 ns [RANDOM] opcode=JMP accum=e1 data=01 out=e1 zero=0
+# 1220.0 ns [RANDOM] opcode=XOR accum=3e data=e7 out=d9 zero=0
+# 1230.0 ns [RANDOM] opcode=JMP accum=ba data=88 out=ba zero=0
+# 1240.0 ns [RANDOM] opcode=LDA accum=80 data=40 out=40 zero=0
+# 1250.0 ns [RANDOM] opcode=SKZ accum=19 data=58 out=19 zero=0
+# 1260.0 ns [RANDOM] opcode=LDA accum=d0 data=87 out=87 zero=0
+# 1270.0 ns [RANDOM] opcode=JMP accum=10 data=30 out=10 zero=0
+# 1280.0 ns [RANDOM] opcode=AND accum=96 data=84 out=84 zero=0
+# 1290.0 ns [RANDOM] opcode=HLT accum=a0 data=d2 out=a0 zero=0
+# 1300.0 ns [RANDOM] opcode=LDA accum=c9 data=ce out=ce zero=0
+# 1310.0 ns [RANDOM] opcode=STO accum=b8 data=17 out=b8 zero=0
+# 1320.0 ns [RANDOM] opcode=XOR accum=37 data=66 out=51 zero=0
+# 1330.0 ns [RANDOM] opcode=STO accum=9a data=d7 out=9a zero=0
+# 1340.0 ns [RANDOM] opcode=ADD accum=1c data=64 out=80 zero=0
+# 1350.0 ns [RANDOM] opcode=ADD accum=fb data=36 out=31 zero=0
+# 1360.0 ns [RANDOM] opcode=LDA accum=5f data=1d out=1d zero=0
+# 1370.0 ns [RANDOM] opcode=STO accum=8c data=9f out=8c zero=0
+# 1380.0 ns [RANDOM] opcode=ADD accum=fe data=67 out=65 zero=0
+# 1390.0 ns [RANDOM] opcode=HLT accum=ed data=4b out=ed zero=0
+# 1400.0 ns [RANDOM] opcode=XOR accum=64 data=a5 out=c1 zero=0
+# 1410.0 ns [RANDOM] opcode=LDA accum=ce data=f6 out=f6 zero=0
+# 1420.0 ns [RANDOM] opcode=ADD accum=38 data=95 out=cd zero=0
+# 1430.0 ns [RANDOM] opcode=JMP accum=70 data=25 out=70 zero=0
+# 1440.0 ns [RANDOM] opcode=SKZ accum=38 data=8c out=38 zero=0
+# 1450.0 ns [RANDOM] opcode=JMP accum=b6 data=47 out=b6 zero=0
+# 1460.0 ns [RANDOM] opcode=SKZ accum=4c data=77 out=4c zero=0
+# 1470.0 ns [RANDOM] opcode=SKZ accum=d6 data=35 out=d6 zero=0
+# 1480.0 ns [RANDOM] opcode=STO accum=8b data=46 out=8b zero=0
+# 1490.0 ns [RANDOM] opcode=XOR accum=02 data=57 out=55 zero=0
+# 1500.0 ns [RANDOM] opcode=ADD accum=c7 data=b4 out=7b zero=0
+# 1510.0 ns [RANDOM] opcode=AND accum=ae data=a3 out=a2 zero=0
+# 1520.0 ns [RANDOM] opcode=LDA accum=70 data=d3 out=d3 zero=0
+# 1530.0 ns [RANDOM] opcode=HLT accum=cc data=b5 out=cc zero=0
+# 1540.0 ns [RANDOM] opcode=HLT accum=b7 data=88 out=b7 zero=0
+# 1550.0 ns [RANDOM] opcode=XOR accum=1d data=0f out=12 zero=0
+# 1560.0 ns [RANDOM] opcode=ADD accum=0c data=df out=eb zero=0
+# 1570.0 ns [RANDOM] opcode=XOR accum=ae data=fc out=52 zero=0
+# 1580.0 ns [RANDOM] opcode=SKZ accum=ba data=f6 out=ba zero=0
+# 1590.0 ns [RANDOM] opcode=ADD accum=27 data=8f out=b6 zero=0
+# 1600.0 ns [RANDOM] opcode=STO accum=ae data=26 out=ae zero=0
+# 1610.0 ns [RANDOM] opcode=AND accum=f6 data=74 out=74 zero=0
+# 1620.0 ns [RANDOM] opcode=SKZ accum=19 data=64 out=19 zero=0
+# 1630.0 ns [RANDOM] opcode=XOR accum=c8 data=09 out=c1 zero=0
+# 1640.0 ns [RANDOM] opcode=ADD accum=a3 data=f4 out=97 zero=0
+# 1650.0 ns [RANDOM] opcode=STO accum=68 data=24 out=68 zero=0
+# 1660.0 ns [RANDOM] opcode=LDA accum=da data=7b out=7b zero=0
+# 1670.0 ns [RANDOM] opcode=SKZ accum=5c data=12 out=5c zero=0
+# 1680.0 ns [RANDOM] opcode=SKZ accum=8a data=78 out=8a zero=0
+# 1690.0 ns [RANDOM] opcode=STO accum=74 data=fc out=74 zero=0
+# 1700.0 ns [RANDOM] opcode=XOR accum=04 data=8c out=88 zero=0
+# 1710.0 ns [RANDOM] opcode=JMP accum=60 data=5d out=60 zero=0
+# 1720.0 ns [RANDOM] opcode=ADD accum=8a data=5d out=e7 zero=0
+# 1730.0 ns [RANDOM] opcode=JMP accum=af data=c0 out=af zero=0
+# 1740.0 ns [RANDOM] opcode=SKZ accum=08 data=25 out=08 zero=0
+# 1750.0 ns [RANDOM] opcode=JMP accum=13 data=3c out=13 zero=0
+# 1760.0 ns [RANDOM] opcode=AND accum=cb data=55 out=41 zero=0
+# 1770.0 ns [RANDOM] opcode=SKZ accum=75 data=84 out=75 zero=0
+# 1780.0 ns [RANDOM] opcode=HLT accum=9b data=68 out=9b zero=0
+# 1790.0 ns [RANDOM] opcode=LDA accum=33 data=d8 out=d8 zero=0
+# 1800.0 ns [RANDOM] opcode=AND accum=10 data=7b out=10 zero=0
+# 1810.0 ns [RANDOM] opcode=STO accum=a5 data=63 out=a5 zero=0
+# 1820.0 ns [RANDOM] opcode=JMP accum=0b data=8c out=0b zero=0
+# 1830.0 ns [RANDOM] opcode=LDA accum=aa data=36 out=36 zero=0
+# 1840.0 ns [RANDOM] opcode=LDA accum=02 data=37 out=37 zero=0
+# 1850.0 ns [RANDOM] opcode=JMP accum=63 data=27 out=63 zero=0
+# 1860.0 ns [RANDOM] opcode=XOR accum=22 data=8a out=a8 zero=0
+# 1870.0 ns [RANDOM] opcode=HLT accum=03 data=e2 out=03 zero=0
+# 1880.0 ns [RANDOM] opcode=AND accum=a6 data=29 out=20 zero=0
+# 1890.0 ns [RANDOM] opcode=AND accum=dd data=b1 out=91 zero=0
+# 1900.0 ns [RANDOM] opcode=JMP accum=09 data=1d out=09 zero=0
+# 1910.0 ns [RANDOM] opcode=XOR accum=21 data=67 out=46 zero=0
+# 1920.0 ns [RANDOM] opcode=JMP accum=a0 data=31 out=a0 zero=0
+# 1930.0 ns [RANDOM] opcode=JMP accum=d4 data=bd out=d4 zero=0
+# 1940.0 ns [RANDOM] opcode=LDA accum=a5 data=00 out=00 zero=0
+# 1950.0 ns [RANDOM] opcode=SKZ accum=be data=7f out=be zero=0
+# 1960.0 ns [RANDOM] opcode=LDA accum=6d data=25 out=25 zero=0
+# 1970.0 ns [RANDOM] opcode=STO accum=b9 data=b7 out=b9 zero=0
+# 1980.0 ns [RANDOM] opcode=SKZ accum=8b data=6c out=8b zero=0
+# 1990.0 ns [RANDOM] opcode=JMP accum=35 data=5f out=35 zero=0
+# 2000.0 ns [RANDOM] opcode=LDA accum=84 data=24 out=24 zero=0
+# 2010.0 ns [RANDOM] opcode=SKZ accum=92 data=ec out=92 zero=0
+# 2020.0 ns [RANDOM] opcode=LDA accum=ae data=16 out=16 zero=0
+# 2030.0 ns [RANDOM] opcode=STO accum=1d data=b0 out=1d zero=0
+# 2040.0 ns [RANDOM] opcode=XOR accum=99 data=ac out=35 zero=0
+# 2050.0 ns [RANDOM] opcode=HLT accum=82 data=85 out=82 zero=0
+# 2060.0 ns [RANDOM] opcode=LDA accum=f1 data=68 out=68 zero=0
+# 2070.0 ns [RANDOM] opcode=SKZ accum=d6 data=12 out=d6 zero=0
+# 2080.0 ns [RANDOM] opcode=SKZ accum=d6 data=9a out=d6 zero=0
+# 2090.0 ns [RANDOM] opcode=JMP accum=f3 data=05 out=f3 zero=0
+# 2100.0 ns [RANDOM] opcode=AND accum=ea data=1c out=08 zero=0
+# 2110.0 ns [RANDOM] opcode=JMP accum=50 data=18 out=50 zero=0
+# 2120.0 ns [RANDOM] opcode=ADD accum=9d data=cc out=69 zero=0
+# 2130.0 ns [RANDOM] opcode=LDA accum=72 data=49 out=49 zero=0
+# 2140.0 ns [RANDOM] opcode=AND accum=08 data=c8 out=08 zero=0
+# 2150.0 ns [RANDOM] opcode=HLT accum=34 data=9d out=34 zero=0
+# 2160.0 ns [RANDOM] opcode=XOR accum=d2 data=15 out=c7 zero=0
+# 2170.0 ns [RANDOM] opcode=JMP accum=a4 data=b2 out=a4 zero=0
+# 2180.0 ns [RANDOM] opcode=STO accum=6f data=c9 out=6f zero=0
+# 2190.0 ns [RANDOM] opcode=AND accum=6a data=2b out=2a zero=0
+# 2200.0 ns [RANDOM] opcode=SKZ accum=00 data=df out=00 zero=1
+# 2210.0 ns [RANDOM] opcode=HLT accum=31 data=73 out=31 zero=0
+# 2220.0 ns [RANDOM] opcode=LDA accum=6b data=e5 out=e5 zero=0
+# 2230.0 ns [RANDOM] opcode=SKZ accum=9f data=91 out=9f zero=0
+# 2240.0 ns [RANDOM] opcode=SKZ accum=8c data=25 out=8c zero=0
+# 2250.0 ns [RANDOM] opcode=JMP accum=29 data=71 out=29 zero=0
+# 2260.0 ns [RANDOM] opcode=HLT accum=7d data=6d out=7d zero=0
+# 2270.0 ns [RANDOM] opcode=STO accum=36 data=b7 out=36 zero=0
+# 2280.0 ns [RANDOM] opcode=ADD accum=8e data=77 out=05 zero=0
+# 2290.0 ns [RANDOM] opcode=STO accum=68 data=ec out=68 zero=0
+# 2300.0 ns [RANDOM] opcode=HLT accum=d6 data=08 out=d6 zero=0
+# 2310.0 ns [RANDOM] opcode=LDA accum=f4 data=22 out=22 zero=0
+# 2320.0 ns [RANDOM] opcode=AND accum=8c data=69 out=08 zero=0
+# 2330.0 ns [RANDOM] opcode=HLT accum=9b data=ca out=9b zero=0
+# 2340.0 ns [RANDOM] opcode=AND accum=fa data=17 out=12 zero=0
+# 2350.0 ns [RANDOM] opcode=ADD accum=c8 data=4a out=12 zero=0
+# 2360.0 ns [RANDOM] opcode=SKZ accum=7c data=29 out=7c zero=0
+# 2370.0 ns [RANDOM] opcode=JMP accum=46 data=72 out=46 zero=0
+# 2380.0 ns [RANDOM] opcode=ADD accum=3f data=f5 out=34 zero=0
+# 2390.0 ns [RANDOM] opcode=SKZ accum=8b data=25 out=8b zero=0
+# 2400.0 ns [RANDOM] opcode=HLT accum=02 data=51 out=02 zero=0
+# 2410.0 ns [RANDOM] opcode=LDA accum=9c data=b1 out=b1 zero=0
+# 2420.0 ns [RANDOM] opcode=JMP accum=93 data=b3 out=93 zero=0
+# 2430.0 ns [RANDOM] opcode=HLT accum=86 data=a2 out=86 zero=0
+# 2440.0 ns [RANDOM] opcode=HLT accum=06 data=d9 out=06 zero=0
+# 2450.0 ns [RANDOM] opcode=AND accum=b2 data=77 out=32 zero=0
+# 2460.0 ns [RANDOM] opcode=XOR accum=2f data=2e out=01 zero=0
+# 2470.0 ns [RANDOM] opcode=LDA accum=b7 data=b7 out=b7 zero=0
+# 2480.0 ns [RANDOM] opcode=JMP accum=f2 data=ed out=f2 zero=0
+# 2490.0 ns [RANDOM] opcode=AND accum=1d data=c7 out=05 zero=0
+# 2500.0 ns [RANDOM] opcode=ADD accum=e2 data=24 out=06 zero=0
+# 2510.0 ns [RANDOM] opcode=AND accum=f3 data=c2 out=c2 zero=0
+# 2520.0 ns [RANDOM] opcode=STO accum=05 data=66 out=05 zero=0
+# 2530.0 ns [RANDOM] opcode=SKZ accum=c8 data=7b out=c8 zero=0
+# 2540.0 ns [RANDOM] opcode=HLT accum=07 data=04 out=07 zero=0
+# 2550.0 ns [RANDOM] opcode=HLT accum=9a data=6a out=9a zero=0
+# 2560.0 ns [RANDOM] opcode=HLT accum=04 data=36 out=04 zero=0
+# 2570.0 ns [RANDOM] opcode=XOR accum=be data=d9 out=67 zero=0
+# 2580.0 ns [RANDOM] opcode=HLT accum=03 data=ba out=03 zero=0
+# 2590.0 ns [RANDOM] opcode=JMP accum=2a data=13 out=2a zero=0
+# 2600.0 ns [RANDOM] opcode=STO accum=53 data=ae out=53 zero=0
+# 2610.0 ns [RANDOM] opcode=HLT accum=56 data=a6 out=56 zero=0
+# 2620.0 ns [RANDOM] opcode=SKZ accum=fe data=dd out=fe zero=0
+# 2630.0 ns [RANDOM] opcode=LDA accum=c7 data=2d out=2d zero=0
+# 2640.0 ns [RANDOM] opcode=JMP accum=b1 data=d6 out=b1 zero=0
+# 2650.0 ns [RANDOM] opcode=STO accum=de data=be out=de zero=0
+# 2660.0 ns [RANDOM] opcode=STO accum=f3 data=32 out=f3 zero=0
+# 2670.0 ns [RANDOM] opcode=AND accum=36 data=0b out=02 zero=0
+# 2680.0 ns [RANDOM] opcode=LDA accum=ba data=06 out=06 zero=0
+# 2690.0 ns [RANDOM] opcode=SKZ accum=a7 data=bd out=a7 zero=0
+# 2700.0 ns [RANDOM] opcode=SKZ accum=47 data=e7 out=47 zero=0
+# 2710.0 ns [RANDOM] opcode=STO accum=20 data=84 out=20 zero=0
+# 2720.0 ns [RANDOM] opcode=STO accum=cd data=6b out=cd zero=0
+# 2730.0 ns [RANDOM] opcode=STO accum=56 data=03 out=56 zero=0
+# 2740.0 ns [RANDOM] opcode=SKZ accum=57 data=b6 out=57 zero=0
+# 2750.0 ns [RANDOM] opcode=SKZ accum=93 data=d4 out=93 zero=0
+# 2760.0 ns [RANDOM] opcode=JMP accum=0f data=51 out=0f zero=0
+# 2770.0 ns [RANDOM] opcode=AND accum=81 data=2a out=00 zero=0
+# 2780.0 ns [RANDOM] opcode=STO accum=4e data=b1 out=4e zero=0
+# 2790.0 ns [RANDOM] opcode=XOR accum=53 data=fb out=a8 zero=0
+# 2800.0 ns [RANDOM] opcode=STO accum=e2 data=8a out=e2 zero=0
+# 2810.0 ns [RANDOM] opcode=LDA accum=a3 data=5e out=5e zero=0
+# 2820.0 ns [RANDOM] opcode=AND accum=a0 data=91 out=80 zero=0
+# 2830.0 ns [RANDOM] opcode=LDA accum=85 data=00 out=00 zero=0
+# 2840.0 ns [RANDOM] opcode=LDA accum=62 data=2e out=2e zero=0
+# 2850.0 ns [RANDOM] opcode=JMP accum=46 data=c2 out=46 zero=0
+# 2860.0 ns [RANDOM] opcode=ADD accum=cd data=74 out=41 zero=0
+# 2870.0 ns [RANDOM] opcode=STO accum=df data=db out=df zero=0
+# 2880.0 ns [RANDOM] opcode=JMP accum=95 data=4b out=95 zero=0
+# 2890.0 ns [RANDOM] opcode=ADD accum=75 data=e8 out=5d zero=0
+# 2900.0 ns [RANDOM] opcode=JMP accum=80 data=2f out=80 zero=0
+# 2910.0 ns [RANDOM] opcode=HLT accum=54 data=ba out=54 zero=0
+# 2920.0 ns [RANDOM] opcode=HLT accum=62 data=c7 out=62 zero=0
+# 2930.0 ns [RANDOM] opcode=LDA accum=83 data=8e out=8e zero=0
+# 2940.0 ns [RANDOM] opcode=XOR accum=b0 data=4c out=fc zero=0
+# 2950.0 ns [RANDOM] opcode=AND accum=b9 data=2b out=29 zero=0
+# 2960.0 ns [RANDOM] opcode=STO accum=91 data=58 out=91 zero=0
+# 2970.0 ns [RANDOM] opcode=LDA accum=28 data=51 out=51 zero=0
+# 2980.0 ns [RANDOM] opcode=XOR accum=1a data=52 out=48 zero=0
+# 2990.0 ns [RANDOM] opcode=HLT accum=98 data=72 out=98 zero=0
+# 3000.0 ns [RANDOM] opcode=HLT accum=87 data=c6 out=87 zero=0
+# 3010.0 ns [RANDOM] opcode=HLT accum=51 data=67 out=51 zero=0
+# 3020.0 ns [RANDOM] opcode=LDA accum=0b data=2b out=2b zero=0
+# 3030.0 ns [RANDOM] opcode=JMP accum=52 data=a5 out=52 zero=0
+# 3040.0 ns [RANDOM] opcode=STO accum=cd data=65 out=cd zero=0
+# 3050.0 ns [RANDOM] opcode=HLT accum=e1 data=a0 out=e1 zero=0
+# 3060.0 ns [RANDOM] opcode=JMP accum=69 data=90 out=69 zero=0
+# 3070.0 ns [RANDOM] opcode=SKZ accum=e1 data=a6 out=e1 zero=0
+# 3080.0 ns [RANDOM] opcode=JMP accum=5f data=2e out=5f zero=0
+# 3090.0 ns [RANDOM] opcode=XOR accum=40 data=79 out=39 zero=0
+# 3100.0 ns [RANDOM] opcode=LDA accum=d2 data=02 out=02 zero=0
+# 3110.0 ns [RANDOM] opcode=STO accum=2b data=29 out=2b zero=0
+# 3120.0 ns [RANDOM] opcode=ADD accum=38 data=24 out=5c zero=0
+# 3130.0 ns [RANDOM] opcode=AND accum=26 data=97 out=06 zero=0
+# 3140.0 ns [RANDOM] opcode=XOR accum=5a data=b8 out=e2 zero=0
+# ----- RANDOM TEST END -----
+# ===== TEST COMPLETED (NO TIMEOUT) =====
+# ** Note: $stop    : alu_test.sv(159)
+#    Time: 3140 ns  Iteration: 1  Instance: /alu_test
+# Break in Module alu_test at alu_test.sv line 159
+# Stopped at alu_test.sv line 159
+# 
+# 
+# End time: 16:19:44 on Dec 07,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2

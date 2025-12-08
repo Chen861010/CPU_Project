@@ -1,0 +1,345 @@
+xrun(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s003: Started on Dec 08, 2025 at 10:35:42 PST
+xrun
+	typedefs.sv
+	ALU.sv
+	alu_test.sv
+	-access +rwc
+	-gui
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /usr/local/apps/cadence/xcelium/IUS2203/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm alu_test.alu1.accum alu_test.alu1.clk alu_test.alu1.data alu_test.alu1.opcode alu_test.alu1.out alu_test.alu1.out_next alu_test.alu1.zero
+Created probe 1
+xcelium> run
+  20.0 ns opcode=HLT data=37 accum=da | zero=0 out=da
+  30.0 ns opcode=SKZ data=37 accum=da | zero=0 out=da
+  40.0 ns opcode=ADD data=37 accum=da | zero=0 out=11
+  50.0 ns opcode=AND data=37 accum=da | zero=0 out=12
+  60.0 ns opcode=XOR data=37 accum=da | zero=0 out=ed
+  70.0 ns opcode=LDA data=37 accum=da | zero=0 out=37
+  80.0 ns opcode=STO data=37 accum=da | zero=0 out=da
+  90.0 ns opcode=JMP data=37 accum=00 | zero=1 out=00
+ 100.0 ns opcode=ADD data=07 accum=12 | zero=0 out=19
+ 110.0 ns opcode=AND data=1f accum=35 | zero=0 out=15
+ 120.0 ns opcode=XOR data=1e accum=1d | zero=0 out=03
+ 130.0 ns opcode=LDA data=72 accum=00 | zero=1 out=72
+ 140.0 ns opcode=STO data=00 accum=10 | zero=0 out=10
+DIRECTED TEST PASSED
+----- RANDOM TEST START -----
+stop -create -name Randomize -randomize
+Created stop Randomize
+
+ 150.0 ns [RANDOM] opcode=ADD accum=56 data=3b out=91 zero=0
+ 160.0 ns [RANDOM] opcode=XOR accum=d6 data=6d out=bb zero=0
+ 170.0 ns [RANDOM] opcode=ADD accum=5d data=b3 out=10 zero=0
+ 180.0 ns [RANDOM] opcode=STO accum=5b data=44 out=5b zero=0
+ 190.0 ns [RANDOM] opcode=LDA accum=05 data=b3 out=b3 zero=0
+ 200.0 ns [RANDOM] opcode=XOR accum=20 data=dc out=fc zero=0
+ 210.0 ns [RANDOM] opcode=STO accum=e3 data=5b out=e3 zero=0
+ 220.0 ns [RANDOM] opcode=LDA accum=60 data=7f out=7f zero=0
+ 230.0 ns [RANDOM] opcode=STO accum=cb data=b1 out=cb zero=0
+ 240.0 ns [RANDOM] opcode=XOR accum=60 data=0d out=6d zero=0
+ 250.0 ns [RANDOM] opcode=HLT accum=41 data=64 out=41 zero=0
+ 260.0 ns [RANDOM] opcode=AND accum=27 data=ab out=23 zero=0
+ 270.0 ns [RANDOM] opcode=LDA accum=b8 data=93 out=93 zero=0
+ 280.0 ns [RANDOM] opcode=XOR accum=31 data=8e out=bf zero=0
+ 290.0 ns [RANDOM] opcode=XOR accum=f8 data=f8 out=00 zero=0
+ 300.0 ns [RANDOM] opcode=AND accum=26 data=68 out=20 zero=0
+ 310.0 ns [RANDOM] opcode=STO accum=27 data=1d out=27 zero=0
+ 320.0 ns [RANDOM] opcode=ADD accum=28 data=0a out=32 zero=0
+ 330.0 ns [RANDOM] opcode=ADD accum=44 data=26 out=6a zero=0
+ 340.0 ns [RANDOM] opcode=HLT accum=12 data=25 out=12 zero=0
+ 350.0 ns [RANDOM] opcode=AND accum=53 data=27 out=03 zero=0
+ 360.0 ns [RANDOM] opcode=SKZ accum=d2 data=98 out=d2 zero=0
+ 370.0 ns [RANDOM] opcode=XOR accum=7a data=e6 out=9c zero=0
+ 380.0 ns [RANDOM] opcode=SKZ accum=db data=7a out=db zero=0
+ 390.0 ns [RANDOM] opcode=STO accum=cb data=f6 out=cb zero=0
+ 400.0 ns [RANDOM] opcode=ADD accum=92 data=54 out=e6 zero=0
+ 410.0 ns [RANDOM] opcode=JMP accum=5a data=5c out=5a zero=0
+ 420.0 ns [RANDOM] opcode=XOR accum=7f data=61 out=1e zero=0
+ 430.0 ns [RANDOM] opcode=JMP accum=d9 data=78 out=d9 zero=0
+ 440.0 ns [RANDOM] opcode=SKZ accum=d1 data=a7 out=d1 zero=0
+ 450.0 ns [RANDOM] opcode=SKZ accum=69 data=35 out=69 zero=0
+ 460.0 ns [RANDOM] opcode=AND accum=a1 data=13 out=01 zero=0
+ 470.0 ns [RANDOM] opcode=AND accum=3c data=87 out=04 zero=0
+ 480.0 ns [RANDOM] opcode=STO accum=4e data=0e out=4e zero=0
+ 490.0 ns [RANDOM] opcode=JMP accum=5e data=37 out=5e zero=0
+ 500.0 ns [RANDOM] opcode=SKZ accum=fc data=6a out=fc zero=0
+ 510.0 ns [RANDOM] opcode=HLT accum=57 data=3a out=57 zero=0
+ 520.0 ns [RANDOM] opcode=LDA accum=6c data=39 out=39 zero=0
+ 530.0 ns [RANDOM] opcode=HLT accum=fe data=66 out=fe zero=0
+ 540.0 ns [RANDOM] opcode=AND accum=cc data=d7 out=c4 zero=0
+ 550.0 ns [RANDOM] opcode=ADD accum=07 data=3b out=42 zero=0
+ 560.0 ns [RANDOM] opcode=STO accum=20 data=b3 out=20 zero=0
+ 570.0 ns [RANDOM] opcode=AND accum=85 data=5d out=05 zero=0
+ 580.0 ns [RANDOM] opcode=AND accum=28 data=ce out=08 zero=0
+ 590.0 ns [RANDOM] opcode=JMP accum=0f data=df out=0f zero=0
+ 600.0 ns [RANDOM] opcode=XOR accum=38 data=cd out=f5 zero=0
+ 610.0 ns [RANDOM] opcode=STO accum=9a data=5c out=9a zero=0
+ 620.0 ns [RANDOM] opcode=ADD accum=70 data=d2 out=42 zero=0
+ 630.0 ns [RANDOM] opcode=LDA accum=a2 data=3f out=3f zero=0
+ 640.0 ns [RANDOM] opcode=AND accum=77 data=a5 out=25 zero=0
+ 650.0 ns [RANDOM] opcode=XOR accum=f2 data=21 out=d3 zero=0
+ 660.0 ns [RANDOM] opcode=LDA accum=96 data=49 out=49 zero=0
+ 670.0 ns [RANDOM] opcode=SKZ accum=c6 data=2f out=c6 zero=0
+ 680.0 ns [RANDOM] opcode=HLT accum=cb data=aa out=cb zero=0
+ 690.0 ns [RANDOM] opcode=SKZ accum=b0 data=7d out=b0 zero=0
+ 700.0 ns [RANDOM] opcode=HLT accum=a7 data=5f out=a7 zero=0
+ 710.0 ns [RANDOM] opcode=ADD accum=91 data=ff out=90 zero=0
+ 720.0 ns [RANDOM] opcode=HLT accum=c2 data=dd out=c2 zero=0
+ 730.0 ns [RANDOM] opcode=HLT accum=a9 data=9b out=a9 zero=0
+ 740.0 ns [RANDOM] opcode=XOR accum=14 data=8b out=9f zero=0
+ 750.0 ns [RANDOM] opcode=ADD accum=29 data=85 out=ae zero=0
+ 760.0 ns [RANDOM] opcode=AND accum=ca data=36 out=02 zero=0
+ 770.0 ns [RANDOM] opcode=SKZ accum=55 data=fc out=55 zero=0
+ 780.0 ns [RANDOM] opcode=ADD accum=f3 data=b1 out=a4 zero=0
+ 790.0 ns [RANDOM] opcode=ADD accum=0d data=d6 out=e3 zero=0
+ 800.0 ns [RANDOM] opcode=AND accum=08 data=ba out=08 zero=0
+ 810.0 ns [RANDOM] opcode=STO accum=6c data=7c out=6c zero=0
+ 820.0 ns [RANDOM] opcode=STO accum=34 data=10 out=34 zero=0
+ 830.0 ns [RANDOM] opcode=LDA accum=f4 data=62 out=62 zero=0
+ 840.0 ns [RANDOM] opcode=ADD accum=cd data=f2 out=bf zero=0
+ 850.0 ns [RANDOM] opcode=SKZ accum=95 data=55 out=95 zero=0
+ 860.0 ns [RANDOM] opcode=ADD accum=9b data=bd out=58 zero=0
+ 870.0 ns [RANDOM] opcode=JMP accum=38 data=94 out=38 zero=0
+ 880.0 ns [RANDOM] opcode=JMP accum=90 data=24 out=90 zero=0
+ 890.0 ns [RANDOM] opcode=STO accum=38 data=ca out=38 zero=0
+ 900.0 ns [RANDOM] opcode=LDA accum=fd data=15 out=15 zero=0
+ 910.0 ns [RANDOM] opcode=ADD accum=07 data=b0 out=b7 zero=0
+ 920.0 ns [RANDOM] opcode=JMP accum=1d data=89 out=1d zero=0
+ 930.0 ns [RANDOM] opcode=AND accum=fe data=e7 out=e6 zero=0
+ 940.0 ns [RANDOM] opcode=AND accum=31 data=0b out=01 zero=0
+ 950.0 ns [RANDOM] opcode=SKZ accum=26 data=33 out=26 zero=0
+ 960.0 ns [RANDOM] opcode=LDA accum=09 data=e0 out=e0 zero=0
+ 970.0 ns [RANDOM] opcode=SKZ accum=6f data=fe out=6f zero=0
+ 980.0 ns [RANDOM] opcode=XOR accum=e0 data=22 out=c2 zero=0
+ 990.0 ns [RANDOM] opcode=ADD accum=12 data=69 out=7b zero=0
+1000.0 ns [RANDOM] opcode=XOR accum=34 data=f2 out=c6 zero=0
+1010.0 ns [RANDOM] opcode=STO accum=bc data=cb out=bc zero=0
+1020.0 ns [RANDOM] opcode=JMP accum=48 data=a9 out=48 zero=0
+1030.0 ns [RANDOM] opcode=AND accum=9d data=10 out=10 zero=0
+1040.0 ns [RANDOM] opcode=STO accum=64 data=e9 out=64 zero=0
+1050.0 ns [RANDOM] opcode=SKZ accum=30 data=be out=30 zero=0
+1060.0 ns [RANDOM] opcode=HLT accum=1c data=a7 out=1c zero=0
+1070.0 ns [RANDOM] opcode=JMP accum=24 data=c2 out=24 zero=0
+1080.0 ns [RANDOM] opcode=AND accum=d6 data=3d out=14 zero=0
+1090.0 ns [RANDOM] opcode=XOR accum=2c data=10 out=3c zero=0
+1100.0 ns [RANDOM] opcode=ADD accum=75 data=46 out=bb zero=0
+1110.0 ns [RANDOM] opcode=ADD accum=8e data=d9 out=67 zero=0
+1120.0 ns [RANDOM] opcode=AND accum=d1 data=c2 out=c0 zero=0
+1130.0 ns [RANDOM] opcode=ADD accum=23 data=c8 out=eb zero=0
+1140.0 ns [RANDOM] opcode=SKZ accum=27 data=34 out=27 zero=0
+1150.0 ns [RANDOM] opcode=SKZ accum=92 data=9f out=92 zero=0
+1160.0 ns [RANDOM] opcode=HLT accum=11 data=df out=11 zero=0
+1170.0 ns [RANDOM] opcode=JMP accum=a7 data=f5 out=a7 zero=0
+1180.0 ns [RANDOM] opcode=AND accum=01 data=03 out=01 zero=0
+1190.0 ns [RANDOM] opcode=SKZ accum=a3 data=b5 out=a3 zero=0
+1200.0 ns [RANDOM] opcode=ADD accum=f5 data=f2 out=e7 zero=0
+1210.0 ns [RANDOM] opcode=HLT accum=20 data=c9 out=20 zero=0
+1220.0 ns [RANDOM] opcode=AND accum=ae data=fa out=aa zero=0
+1230.0 ns [RANDOM] opcode=STO accum=45 data=5a out=45 zero=0
+1240.0 ns [RANDOM] opcode=AND accum=c2 data=7a out=42 zero=0
+1250.0 ns [RANDOM] opcode=LDA accum=c6 data=62 out=62 zero=0
+1260.0 ns [RANDOM] opcode=AND accum=8f data=df out=8f zero=0
+1270.0 ns [RANDOM] opcode=JMP accum=81 data=40 out=81 zero=0
+1280.0 ns [RANDOM] opcode=STO accum=53 data=d5 out=53 zero=0
+1290.0 ns [RANDOM] opcode=JMP accum=0c data=f7 out=0c zero=0
+1300.0 ns [RANDOM] opcode=AND accum=2b data=cc out=08 zero=0
+1310.0 ns [RANDOM] opcode=SKZ accum=b9 data=4f out=b9 zero=0
+1320.0 ns [RANDOM] opcode=LDA accum=d6 data=6a out=6a zero=0
+1330.0 ns [RANDOM] opcode=HLT accum=04 data=2c out=04 zero=0
+1340.0 ns [RANDOM] opcode=SKZ accum=75 data=b7 out=75 zero=0
+1350.0 ns [RANDOM] opcode=JMP accum=eb data=79 out=eb zero=0
+1360.0 ns [RANDOM] opcode=XOR accum=8e data=ce out=40 zero=0
+1370.0 ns [RANDOM] opcode=JMP accum=ff data=b6 out=ff zero=0
+1380.0 ns [RANDOM] opcode=JMP accum=ea data=92 out=ea zero=0
+1390.0 ns [RANDOM] opcode=AND accum=a8 data=07 out=00 zero=0
+1400.0 ns [RANDOM] opcode=LDA accum=1a data=4a out=4a zero=0
+1410.0 ns [RANDOM] opcode=HLT accum=1f data=a0 out=1f zero=0
+1420.0 ns [RANDOM] opcode=HLT accum=f7 data=68 out=f7 zero=0
+1430.0 ns [RANDOM] opcode=AND accum=1a data=fb out=1a zero=0
+1440.0 ns [RANDOM] opcode=XOR accum=a8 data=ac out=04 zero=0
+1450.0 ns [RANDOM] opcode=HLT accum=c4 data=a4 out=c4 zero=0
+1460.0 ns [RANDOM] opcode=LDA accum=61 data=14 out=14 zero=0
+1470.0 ns [RANDOM] opcode=HLT accum=f8 data=ea out=f8 zero=0
+1480.0 ns [RANDOM] opcode=SKZ accum=f7 data=56 out=f7 zero=0
+1490.0 ns [RANDOM] opcode=XOR accum=06 data=c4 out=c2 zero=0
+1500.0 ns [RANDOM] opcode=HLT accum=dd data=c0 out=dd zero=0
+1510.0 ns [RANDOM] opcode=LDA accum=99 data=6c out=6c zero=0
+1520.0 ns [RANDOM] opcode=JMP accum=0e data=cc out=0e zero=0
+1530.0 ns [RANDOM] opcode=LDA accum=2d data=26 out=26 zero=0
+1540.0 ns [RANDOM] opcode=JMP accum=53 data=5e out=53 zero=0
+1550.0 ns [RANDOM] opcode=LDA accum=3a data=86 out=86 zero=0
+1560.0 ns [RANDOM] opcode=STO accum=dd data=a9 out=dd zero=0
+1570.0 ns [RANDOM] opcode=ADD accum=e2 data=92 out=74 zero=0
+1580.0 ns [RANDOM] opcode=LDA accum=ce data=f0 out=f0 zero=0
+1590.0 ns [RANDOM] opcode=AND accum=41 data=d7 out=41 zero=0
+1600.0 ns [RANDOM] opcode=SKZ accum=10 data=0d out=10 zero=0
+1610.0 ns [RANDOM] opcode=JMP accum=1d data=d6 out=1d zero=0
+1620.0 ns [RANDOM] opcode=XOR accum=d7 data=63 out=b4 zero=0
+1630.0 ns [RANDOM] opcode=XOR accum=38 data=32 out=0a zero=0
+1640.0 ns [RANDOM] opcode=SKZ accum=d3 data=52 out=d3 zero=0
+1650.0 ns [RANDOM] opcode=SKZ accum=3d data=77 out=3d zero=0
+1660.0 ns [RANDOM] opcode=XOR accum=d7 data=94 out=43 zero=0
+1670.0 ns [RANDOM] opcode=HLT accum=b4 data=91 out=b4 zero=0
+1680.0 ns [RANDOM] opcode=HLT accum=fa data=12 out=fa zero=0
+1690.0 ns [RANDOM] opcode=XOR accum=44 data=23 out=67 zero=0
+1700.0 ns [RANDOM] opcode=ADD accum=73 data=7e out=f1 zero=0
+1710.0 ns [RANDOM] opcode=ADD accum=c1 data=3f out=00 zero=0
+1720.0 ns [RANDOM] opcode=ADD accum=b1 data=1e out=cf zero=0
+1730.0 ns [RANDOM] opcode=AND accum=88 data=22 out=00 zero=0
+1740.0 ns [RANDOM] opcode=ADD accum=03 data=f9 out=fc zero=0
+1750.0 ns [RANDOM] opcode=LDA accum=db data=66 out=66 zero=0
+1760.0 ns [RANDOM] opcode=STO accum=fb data=2b out=fb zero=0
+1770.0 ns [RANDOM] opcode=SKZ accum=3c data=95 out=3c zero=0
+1780.0 ns [RANDOM] opcode=SKZ accum=7e data=c4 out=7e zero=0
+1790.0 ns [RANDOM] opcode=STO accum=e1 data=31 out=e1 zero=0
+1800.0 ns [RANDOM] opcode=XOR accum=8b data=89 out=02 zero=0
+1810.0 ns [RANDOM] opcode=LDA accum=b0 data=a9 out=a9 zero=0
+1820.0 ns [RANDOM] opcode=HLT accum=64 data=28 out=64 zero=0
+1830.0 ns [RANDOM] opcode=ADD accum=2d data=68 out=95 zero=0
+1840.0 ns [RANDOM] opcode=LDA accum=45 data=0d out=0d zero=0
+1850.0 ns [RANDOM] opcode=SKZ accum=af data=10 out=af zero=0
+1860.0 ns [RANDOM] opcode=ADD accum=80 data=c5 out=45 zero=0
+1870.0 ns [RANDOM] opcode=STO accum=58 data=ed out=58 zero=0
+1880.0 ns [RANDOM] opcode=STO accum=57 data=81 out=57 zero=0
+1890.0 ns [RANDOM] opcode=AND accum=f6 data=dd out=d4 zero=0
+1900.0 ns [RANDOM] opcode=STO accum=71 data=ed out=71 zero=0
+1910.0 ns [RANDOM] opcode=STO accum=a1 data=fa out=a1 zero=0
+1920.0 ns [RANDOM] opcode=ADD accum=d5 data=43 out=18 zero=0
+1930.0 ns [RANDOM] opcode=LDA accum=51 data=74 out=74 zero=0
+1940.0 ns [RANDOM] opcode=STO accum=f3 data=45 out=f3 zero=0
+1950.0 ns [RANDOM] opcode=LDA accum=0b data=4d out=4d zero=0
+1960.0 ns [RANDOM] opcode=LDA accum=43 data=17 out=17 zero=0
+1970.0 ns [RANDOM] opcode=LDA accum=a2 data=52 out=52 zero=0
+1980.0 ns [RANDOM] opcode=LDA accum=cb data=f4 out=f4 zero=0
+1990.0 ns [RANDOM] opcode=LDA accum=bf data=c1 out=c1 zero=0
+2000.0 ns [RANDOM] opcode=LDA accum=a1 data=31 out=31 zero=0
+2010.0 ns [RANDOM] opcode=AND accum=1b data=60 out=00 zero=0
+2020.0 ns [RANDOM] opcode=LDA accum=27 data=17 out=17 zero=0
+2030.0 ns [RANDOM] opcode=HLT accum=e6 data=27 out=e6 zero=0
+2040.0 ns [RANDOM] opcode=LDA accum=d9 data=3f out=3f zero=0
+2050.0 ns [RANDOM] opcode=HLT accum=11 data=bd out=11 zero=0
+2060.0 ns [RANDOM] opcode=LDA accum=2f data=d6 out=d6 zero=0
+2070.0 ns [RANDOM] opcode=SKZ accum=be data=dd out=be zero=0
+2080.0 ns [RANDOM] opcode=AND accum=7a data=eb out=6a zero=0
+2090.0 ns [RANDOM] opcode=HLT accum=04 data=e8 out=04 zero=0
+2100.0 ns [RANDOM] opcode=HLT accum=c8 data=73 out=c8 zero=0
+2110.0 ns [RANDOM] opcode=STO accum=7a data=f0 out=7a zero=0
+2120.0 ns [RANDOM] opcode=LDA accum=4e data=d2 out=d2 zero=0
+2130.0 ns [RANDOM] opcode=JMP accum=76 data=d3 out=76 zero=0
+2140.0 ns [RANDOM] opcode=JMP accum=25 data=15 out=25 zero=0
+2150.0 ns [RANDOM] opcode=JMP accum=11 data=b7 out=11 zero=0
+2160.0 ns [RANDOM] opcode=SKZ accum=ba data=68 out=ba zero=0
+2170.0 ns [RANDOM] opcode=STO accum=79 data=15 out=79 zero=0
+2180.0 ns [RANDOM] opcode=STO accum=6b data=6c out=6b zero=0
+2190.0 ns [RANDOM] opcode=JMP accum=e3 data=e0 out=e3 zero=0
+2200.0 ns [RANDOM] opcode=AND accum=6f data=cb out=4b zero=0
+2210.0 ns [RANDOM] opcode=SKZ accum=b3 data=04 out=b3 zero=0
+2220.0 ns [RANDOM] opcode=JMP accum=2d data=10 out=2d zero=0
+2230.0 ns [RANDOM] opcode=STO accum=aa data=e9 out=aa zero=0
+2240.0 ns [RANDOM] opcode=XOR accum=f9 data=d2 out=2b zero=0
+2250.0 ns [RANDOM] opcode=JMP accum=4e data=8c out=4e zero=0
+2260.0 ns [RANDOM] opcode=JMP accum=f0 data=72 out=f0 zero=0
+2270.0 ns [RANDOM] opcode=STO accum=57 data=f9 out=57 zero=0
+2280.0 ns [RANDOM] opcode=AND accum=a5 data=3c out=24 zero=0
+2290.0 ns [RANDOM] opcode=JMP accum=d5 data=17 out=d5 zero=0
+2300.0 ns [RANDOM] opcode=AND accum=54 data=d0 out=50 zero=0
+2310.0 ns [RANDOM] opcode=SKZ accum=d6 data=c6 out=d6 zero=0
+2320.0 ns [RANDOM] opcode=LDA accum=94 data=01 out=01 zero=0
+2330.0 ns [RANDOM] opcode=JMP accum=3e data=4e out=3e zero=0
+2340.0 ns [RANDOM] opcode=XOR accum=d3 data=f5 out=26 zero=0
+2350.0 ns [RANDOM] opcode=LDA accum=0a data=57 out=57 zero=0
+2360.0 ns [RANDOM] opcode=ADD accum=bf data=73 out=32 zero=0
+2370.0 ns [RANDOM] opcode=HLT accum=50 data=75 out=50 zero=0
+2380.0 ns [RANDOM] opcode=HLT accum=66 data=09 out=66 zero=0
+2390.0 ns [RANDOM] opcode=SKZ accum=7d data=f1 out=7d zero=0
+2400.0 ns [RANDOM] opcode=SKZ accum=a5 data=db out=a5 zero=0
+2410.0 ns [RANDOM] opcode=JMP accum=ad data=d0 out=ad zero=0
+2420.0 ns [RANDOM] opcode=XOR accum=fa data=6b out=91 zero=0
+2430.0 ns [RANDOM] opcode=JMP accum=13 data=20 out=13 zero=0
+2440.0 ns [RANDOM] opcode=SKZ accum=53 data=f3 out=53 zero=0
+2450.0 ns [RANDOM] opcode=HLT accum=36 data=80 out=36 zero=0
+2460.0 ns [RANDOM] opcode=HLT accum=48 data=09 out=48 zero=0
+2470.0 ns [RANDOM] opcode=ADD accum=65 data=a1 out=06 zero=0
+2480.0 ns [RANDOM] opcode=XOR accum=84 data=2f out=ab zero=0
+2490.0 ns [RANDOM] opcode=SKZ accum=39 data=be out=39 zero=0
+2500.0 ns [RANDOM] opcode=LDA accum=20 data=60 out=60 zero=0
+2510.0 ns [RANDOM] opcode=SKZ accum=8a data=76 out=8a zero=0
+2520.0 ns [RANDOM] opcode=STO accum=d0 data=44 out=d0 zero=0
+2530.0 ns [RANDOM] opcode=JMP accum=3e data=79 out=3e zero=0
+2540.0 ns [RANDOM] opcode=STO accum=f4 data=0e out=f4 zero=0
+2550.0 ns [RANDOM] opcode=JMP accum=d5 data=54 out=d5 zero=0
+2560.0 ns [RANDOM] opcode=AND accum=de data=b2 out=92 zero=0
+2570.0 ns [RANDOM] opcode=HLT accum=6b data=3a out=6b zero=0
+2580.0 ns [RANDOM] opcode=ADD accum=dd data=a3 out=80 zero=0
+2590.0 ns [RANDOM] opcode=AND accum=96 data=10 out=10 zero=0
+2600.0 ns [RANDOM] opcode=LDA accum=c3 data=bb out=bb zero=0
+2610.0 ns [RANDOM] opcode=AND accum=c7 data=b6 out=86 zero=0
+2620.0 ns [RANDOM] opcode=STO accum=a0 data=b8 out=a0 zero=0
+2630.0 ns [RANDOM] opcode=LDA accum=38 data=da out=da zero=0
+2640.0 ns [RANDOM] opcode=ADD accum=b0 data=cd out=7d zero=0
+2650.0 ns [RANDOM] opcode=SKZ accum=61 data=cb out=61 zero=0
+2660.0 ns [RANDOM] opcode=JMP accum=9e data=b4 out=9e zero=0
+2670.0 ns [RANDOM] opcode=ADD accum=67 data=6b out=d2 zero=0
+2680.0 ns [RANDOM] opcode=AND accum=69 data=ff out=69 zero=0
+2690.0 ns [RANDOM] opcode=ADD accum=3d data=35 out=72 zero=0
+2700.0 ns [RANDOM] opcode=XOR accum=d4 data=46 out=92 zero=0
+2710.0 ns [RANDOM] opcode=XOR accum=1e data=b8 out=a6 zero=0
+2720.0 ns [RANDOM] opcode=SKZ accum=a9 data=d6 out=a9 zero=0
+2730.0 ns [RANDOM] opcode=JMP accum=9c data=f5 out=9c zero=0
+2740.0 ns [RANDOM] opcode=ADD accum=0f data=3e out=4d zero=0
+2750.0 ns [RANDOM] opcode=HLT accum=74 data=55 out=74 zero=0
+2760.0 ns [RANDOM] opcode=STO accum=9d data=e1 out=9d zero=0
+2770.0 ns [RANDOM] opcode=AND accum=b4 data=6e out=24 zero=0
+2780.0 ns [RANDOM] opcode=HLT accum=c1 data=9b out=c1 zero=0
+2790.0 ns [RANDOM] opcode=HLT accum=60 data=76 out=60 zero=0
+2800.0 ns [RANDOM] opcode=XOR accum=32 data=73 out=41 zero=0
+2810.0 ns [RANDOM] opcode=STO accum=e5 data=a3 out=e5 zero=0
+2820.0 ns [RANDOM] opcode=XOR accum=5c data=09 out=55 zero=0
+2830.0 ns [RANDOM] opcode=HLT accum=04 data=93 out=04 zero=0
+2840.0 ns [RANDOM] opcode=AND accum=15 data=1b out=11 zero=0
+2850.0 ns [RANDOM] opcode=JMP accum=dd data=32 out=dd zero=0
+2860.0 ns [RANDOM] opcode=LDA accum=81 data=06 out=06 zero=0
+2870.0 ns [RANDOM] opcode=JMP accum=b9 data=dc out=b9 zero=0
+2880.0 ns [RANDOM] opcode=ADD accum=01 data=68 out=69 zero=0
+2890.0 ns [RANDOM] opcode=STO accum=68 data=c0 out=68 zero=0
+2900.0 ns [RANDOM] opcode=ADD accum=3e data=93 out=d1 zero=0
+2910.0 ns [RANDOM] opcode=HLT accum=d7 data=e0 out=d7 zero=0
+2920.0 ns [RANDOM] opcode=STO accum=e0 data=80 out=e0 zero=0
+2930.0 ns [RANDOM] opcode=STO accum=81 data=fc out=81 zero=0
+2940.0 ns [RANDOM] opcode=ADD accum=79 data=20 out=99 zero=0
+2950.0 ns [RANDOM] opcode=XOR accum=95 data=6e out=fb zero=0
+2960.0 ns [RANDOM] opcode=LDA accum=9a data=6a out=6a zero=0
+2970.0 ns [RANDOM] opcode=LDA accum=e6 data=1d out=1d zero=0
+2980.0 ns [RANDOM] opcode=SKZ accum=72 data=6c out=72 zero=0
+2990.0 ns [RANDOM] opcode=ADD accum=f6 data=f9 out=ef zero=0
+3000.0 ns [RANDOM] opcode=XOR accum=92 data=66 out=f4 zero=0
+3010.0 ns [RANDOM] opcode=JMP accum=4e data=44 out=4e zero=0
+3020.0 ns [RANDOM] opcode=LDA accum=f0 data=55 out=55 zero=0
+3030.0 ns [RANDOM] opcode=AND accum=f3 data=92 out=92 zero=0
+3040.0 ns [RANDOM] opcode=JMP accum=93 data=31 out=93 zero=0
+3050.0 ns [RANDOM] opcode=SKZ accum=ec data=61 out=ec zero=0
+3060.0 ns [RANDOM] opcode=LDA accum=df data=9b out=9b zero=0
+3070.0 ns [RANDOM] opcode=ADD accum=17 data=fd out=14 zero=0
+3080.0 ns [RANDOM] opcode=STO accum=4b data=bc out=4b zero=0
+3090.0 ns [RANDOM] opcode=STO accum=6b data=2e out=6b zero=0
+3100.0 ns [RANDOM] opcode=SKZ accum=78 data=b9 out=78 zero=0
+3110.0 ns [RANDOM] opcode=STO accum=e8 data=8b out=e8 zero=0
+3120.0 ns [RANDOM] opcode=STO accum=2b data=47 out=2b zero=0
+3130.0 ns [RANDOM] opcode=ADD accum=4e data=20 out=6e zero=0
+3140.0 ns [RANDOM] opcode=SKZ accum=a7 data=f6 out=a7 zero=0
+----- RANDOM TEST END -----
+===== TEST COMPLETED (NO TIMEOUT) =====
+Simulation stopped via $stop(1) at time 3140 NS + 0
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.03-s003: Exiting on Dec 08, 2025 at 11:00:31 PST  (total: 00:24:49)

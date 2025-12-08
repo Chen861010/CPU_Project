@@ -1,0 +1,285 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /alu_test
+=== Design Unit: work.alu_test
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         1         1    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /alu_test
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File alu_test.sv
+------------------------------------IF Branch------------------------------------
+    83                                        13     Count coming in to IF
+    83              1                    ***0***     
+                                              13     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       1         0         1     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /alu_test --
+
+  File alu_test.sv
+----------------Focused Condition View-------------------
+Line       83 Item    1  ({zero,out} !== expects)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                Input Term   Covered  Reason for no coverage   Hint
+               -----------  --------  -----------------------  --------------
+  ({zero,out} !== expects)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                  Non-masking condition(s)      
+ ---------  ---------  --------------------        -------------------------     
+  Row   1:          1  ({zero,out} !== expects)_0  -                             
+  Row   2:    ***0***  ({zero,out} !== expects)_1  -                             
+
+
+
+Covergroup Coverage:
+    Covergroups                      3        na        na   100.00%
+        Coverpoints/Crosses          3        na        na        na
+            Covergroup Bins         13        13         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /alu_test/cg_opcode                             100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/alu_test/cov_opcode            100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin HLT                                            38          1          -    Covered              
+        bin SKZ                                            38          1          -    Covered              
+        bin ADD                                            31          1          -    Covered              
+        bin AND                                            39          1          -    Covered              
+        bin XOR                                            32          1          -    Covered              
+        bin LDA                                            45          1          -    Covered              
+        bin STO                                            39          1          -    Covered              
+        bin JMP                                            52          1          -    Covered              
+ TYPE /alu_test/cg_zero                               100.00%        100          -    Covered              
+    covered/total bins:                                     2          2          -                      
+    missing/total bins:                                     0          2          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_zero                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/alu_test/cov_zero              100.00%        100          -    Covered              
+    covered/total bins:                                     2          2          -                      
+    missing/total bins:                                     0          2          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_zero                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin z0                                            309          1          -    Covered              
+        bin z1                                              4          1          -    Covered              
+ TYPE /alu_test/cg_out                                100.00%        100          -    Covered              
+    covered/total bins:                                     3          3          -                      
+    missing/total bins:                                     0          3          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_out                                 100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/alu_test/cov_out               100.00%        100          -    Covered              
+    covered/total bins:                                     3          3          -                      
+    missing/total bins:                                     0          3          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_out                                 100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin low                                            43          1          -    Covered              
+        bin mid                                           134          1          -    Covered              
+        bin high                                          136          1          -    Covered              
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      65        62         3    95.38%
+
+================================Statement Details================================
+
+Statement Coverage for instance /alu_test --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File alu_test.sv
+    14              1                        629     
+    14              2                        628     
+    58              1                          1     
+    59              1                          1     
+    60              1                          1     
+    74              1                          1     
+    81              1                         13     
+    85              1                    ***0***     
+    87              1                    ***0***     
+    88              1                    ***0***     
+    98              1                          1     
+    99              1                          1     
+    99              2                          1     
+    99              3                          1     
+    100             1                          1     
+    100             2                          1     
+    100             3                          1     
+    101             1                          1     
+    101             2                          1     
+    101             3                          1     
+    102             1                          1     
+    102             2                          1     
+    102             3                          1     
+    103             1                          1     
+    103             2                          1     
+    103             3                          1     
+    104             1                          1     
+    104             2                          1     
+    104             3                          1     
+    105             1                          1     
+    105             2                          1     
+    105             3                          1     
+    106             1                          1     
+    106             2                          1     
+    106             3                          1     
+    107             1                          1     
+    107             2                          1     
+    107             3                          1     
+    108             1                          1     
+    108             2                          1     
+    108             3                          1     
+    109             1                          1     
+    109             2                          1     
+    109             3                          1     
+    110             1                          1     
+    110             2                          1     
+    110             3                          1     
+    111             1                          1     
+    111             2                          1     
+    111             3                          1     
+    113             1                          1     
+    123             1                          1     
+    125             1                        300     
+    126             1                        300     
+    128             1                        300     
+    129             1                        300     
+    130             1                        300     
+    132             1                        300     
+    136             1                        300     
+    140             1                          1     
+    149             1                          1     
+    152             1                          1     
+    155             1                          1     
+    158             1                          1     
+    159             1                          1     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         60        60         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /alu_test --
+
+                                              Node      1H->0L      0L->1H                          "Coverage"
+                                              ---------------------------------------------------------------
+
+Total Node Count     =         34 
+Toggled Node Count   =         34 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (60 of 60 bins)
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /alu_test/cg_opcode                             100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/alu_test/cov_opcode            100.00%        100          -    Covered              
+    covered/total bins:                                     8          8          -                      
+    missing/total bins:                                     0          8          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin HLT                                            38          1          -    Covered              
+        bin SKZ                                            38          1          -    Covered              
+        bin ADD                                            31          1          -    Covered              
+        bin AND                                            39          1          -    Covered              
+        bin XOR                                            32          1          -    Covered              
+        bin LDA                                            45          1          -    Covered              
+        bin STO                                            39          1          -    Covered              
+        bin JMP                                            52          1          -    Covered              
+ TYPE /alu_test/cg_zero                               100.00%        100          -    Covered              
+    covered/total bins:                                     2          2          -                      
+    missing/total bins:                                     0          2          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_zero                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/alu_test/cov_zero              100.00%        100          -    Covered              
+    covered/total bins:                                     2          2          -                      
+    missing/total bins:                                     0          2          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_zero                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin z0                                            309          1          -    Covered              
+        bin z1                                              4          1          -    Covered              
+ TYPE /alu_test/cg_out                                100.00%        100          -    Covered              
+    covered/total bins:                                     3          3          -                      
+    missing/total bins:                                     0          3          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_out                                 100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/alu_test/cov_out               100.00%        100          -    Covered              
+    covered/total bins:                                     3          3          -                      
+    missing/total bins:                                     0          3          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_out                                 100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin low                                            43          1          -    Covered              
+        bin mid                                           134          1          -    Covered              
+        bin high                                          136          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 3
+
+Total Coverage By Instance (filtered view): 69.07%
+

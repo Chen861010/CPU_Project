@@ -1,0 +1,4 @@
+s1(07Dec2025:16:20:25):  xrun typedefs.sv ALU.sv alu_test.sv -access +rwc -gui 
+s2(07Dec2025:17:34:31):  xrun typedefs.sv ALU.sv alu_test.sv -access +rwc -gui 
+s3(08Dec2025:09:41:15):  xrun typedefs.sv ALU.sv alu_test.sv -access +rwc -gui 
+s4(08Dec2025:10:35:42):  xrun typedefs.sv ALU.sv alu_test.sv -access +rwc -gui 
