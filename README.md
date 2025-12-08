@@ -74,33 +74,55 @@ README.md                    # Project documentation (this file)
 
 ## 🖥️ Simulation Tools
 
-### **Cadence Xcelium + SimVision (default for waveform debugging)**
+---
 
-Used for main simulation of RTL + TB:
+## **Cadence Xcelium + SimVision (`runme.sh`)**
+
+`runme.sh` is used for **full CPU simulation and waveform debugging**.  
+This script compiles the entire design and launches SimVision for FSDB waveform viewing.
+
+### Typical Flow
 
 ```bash
-./runme.sh      # compile + simulate full CPU with SimVision
+./runme.sh       # compile + simulate + open SimVision waveform viewer
 ```
 
-Features:
+### Internally, the script performs:
+
+```bash
+xrun -64bit -access +rwc \
+     cpu_tb.sv cpu.sv ... \
+     -gui
+```
+
+### Features
+
 - Fast compile/runtime  
-- FSDB waveform viewing  
-- Excellent SVA/assertion support  
+- Full SVA/assertion support  
+- SimVision waveform debugging  
+- FSDB signal tracing  
+
+### Output Files
+
+- `xrun.log` — simulation log  
+- `xcelium.d/` — build directory  
+- `waves.shm/` or `.fsdb` — waveform database  
+- `simvision_history/` — SimVision layout  
 
 ---
 
 ## **QuestaSim Functional Coverage (`runcover.sh`)**
 
-`runcover.sh` is designed for **QuestaSim**, not Xcelium.  
-It runs UCDB functional coverage and uses `cover.do`.
+`runcover.sh` is designed specifically for **functional coverage** using **QuestaSim UCDB**.  
+This script compiles modules, runs the testbench, executes `cover.do`, and writes coverage reports.
 
-Typical flow:
+### Typical Flow
 
 ```bash
 ./runcover.sh    # compile + simulate + generate UCDB coverage
 ```
 
-Internally this script performs:
+### Internally, the script performs:
 
 ```bash
 vlib work
@@ -108,12 +130,25 @@ vlog *.sv
 vsim -c top_tb -do "do cover.do; run -all; coverage report -output cov.rpt; quit"
 ```
 
-Coverage output:
-- `cov.rpt` (text report)
-- `work.ucdb` (complete coverage database)
+### Features
 
-You can also view coverage in Questa GUI:
+- UCDB functional coverage  
+- FSM, opcode, ALU-path coverage  
+- Coverage merging and visualization  
+- Compatible with all per-module testbenches  
+
+### Output Files
+
+- `cov.rpt` — text-based coverage report  
+- `work.ucdb` — full UCDB coverage database  
+- `transcript` — QuestaSim command log  
+
+### Viewing Coverage in GUI
 
 ```bash
 vsim -viewcov work.ucdb
 ```
+
+---
+
+
