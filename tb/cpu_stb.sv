@@ -16,7 +16,6 @@ timeprecision 100ps;
 
 import typedefs::*;
 `include "cpu_coverage.sv"
-import cpu_cov_pkg::*;
 
 module testbench;
 
